@@ -1,0 +1,11 @@
+<resources>
+    <string name="login_status_login_success">Login Success</string>
+    <string name="login_status_login_fail">Login Failed</string>
+    <string name="login_status_logging_in">Logining</string>
+    <string name="login_title_trtc">Tencent Cloud TRTC</string>
+    <string name="login_text_user_id">User ID</string>
+    <string name="login_hint_user_id">Please input your user id</string>
+    <string name="login_tips_input_correct_info">Please input your user id</string>
+    <string name="login_btn_login">Login</string>
+    <string name="login_tips_auto_login_fail">auto login failed</string>
+</resources>

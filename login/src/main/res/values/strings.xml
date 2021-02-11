@@ -1,0 +1,11 @@
+<resources>
+    <string name="login_status_login_success">登录成功</string>
+    <string name="login_status_login_fail">登录失败</string>
+    <string name="login_status_logging_in">正在登录</string>
+    <string name="login_title_trtc">腾讯云TRTC</string>
+    <string name="login_text_user_id">用户名</string>
+    <string name="login_hint_user_id">请输入登录的userId</string>
+    <string name="login_tips_input_correct_info">请输入userId</string>
+    <string name="login_btn_login">登录</string>
+    <string name="login_tips_auto_login_fail">自动登录失败，请重新获取验证码登录</string>
+</resources>

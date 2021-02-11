@@ -1,0 +1,69 @@
+<resources>
+    <string name="trtcvoiceroom_room_title" formatted="false">Room ID: %d</string>
+    <string name="trtcvoiceroom_numer_format" formatted="false" >%d watching</string>
+    <string name="trtcvoiceroom_agree">agree</string>
+    <string name="trtcvoiceroom_warning_not_empty">"input can't be empty!"</string>
+    <string name="trtcvoiceroom_send">send</string>
+    <string name="trtcvoiceroom_main_title" formatted="false">%1s(%2d)</string>
+    <string name="trtcvoiceroom_hands_up">hands up</string>
+    <string name="trtcvoiceroom_seat_locked">Blocked</string>
+    <string name="trtcvoiceroom_invite_into_seat">Invite</string>
+    <string name="trtcvoiceroom_invite_hint">Invite</string>
+    <string name="trtcvoiceroom_send_success">Send successfully</string>
+    <string name="trtcvoiceroom_send_failed">Failed to send</string>
+    <string name="trtcvoiceroom_enable_mic">The microphone is turned on</string>
+    <string name="trtcvoiceroom_disable_mic">The microphone is turned off</string>
+    <string name="trtcvoiceroom_unmuted">Unmuted</string>
+    <string name="trtcvoiceroom_muted">Muted</string>
+    <string name="trtcvoiceroom_host_only">Only the host can operate</string>
+    <string name="trtcvoiceroom_input_empty">Please input something</string>
+    <string name="trtcvoiceroom_me">me</string>
+    <string name="trtcvoiceroom_fetching_host_info">Fethcing host info</string>
+    <string name="trtcvoiceroom_host_offline">Host is offline</string>
+    <string name="trtcvoiceroom_anchor_enter_seat">%1s enter No.%2d seat</string>
+    <string name="trtcvoiceroom_anchor_leave_seat">%1s leave No.%2d seat</string>
+    <string name="trtcvoiceroom_mute_seat">No.%d seat is muted</string>
+    <string name="trtcvoiceroom_unmute_seat">No.%d seat is unmuted</string>
+    <string name="trtcvoiceroom_anchor_close_seat">Host block No.%d seat</string>
+    <string name="trtcvoiceroom_anchor_open_seat">Host unblock No.%d seat</string>
+    <string name="trtcvoiceroom_host_enter_seat_success">Host succeeded in occupying the seat</string>
+    <string name="trtcvoiceroom_host_enter_seat_failed">Host failed to occupy the seat[%1d]:%2s</string>
+    <string name="trtcvoiceroom_unmute_him">Unmuted seat</string>
+    <string name="trtcvoiceroom_mute_him">Muted seat</string>
+    <string name="trtcvoiceroom_kick_him">Kick him/her</string>
+    <string name="trtcvoiceroom_invite_him">Pick him/her</string>
+    <string name="trtcvoiceroom_lock_seat">Block seat</string>
+    <string name="trtcvoiceroom_unlock_seat">UnBlock seat</string>
+    <string name="trtcvoiceroom_req_exp">The request has expired</string>
+    <string name="trtcvoiceroom_accept_failed">Failed to accept request[%d]</string>
+    <string name="trtcvoiceroom_request_seat">Apply for No.%d seat</string>
+    <string name="trtcvoiceroom_seat_used">The seat is used</string>
+    <string name="trtcvoiceroom_pick_seat_success">Pick %s on the seat</string>
+    <string name="trtcvoiceroom_dismiss_room">The host has closed the room</string>
+    <string name="trtcvoiceroom_reject_reqeust">You have rejected the invitation</string>
+    <string name="trtcvoiceroom_host_invite">The host invites you to sit in the no.%d seat</string>
+    <string name="trtcvoiceroom_still_loading">The room is loading</string>
+    <string name="trtcvoiceroom_ur_host">you are the anchor</string>
+    <string name="trtcvoiceroom_leave_success">leave seat success</string>
+    <string name="trtcvoiceroom_request_seat_hint">apply</string>
+    <string name="trtcvoiceroom_leave_seat_hint">Leave seat</string>
+    <string name="trtcvoiceroom_enter_room_failed">Enter room success[%1d]:%2s</string>
+    <string name="trtcvoiceroom_enter_room_success">Enter room failed</string>
+
+    <string name="trtcvoiceroom_title">voice chat room</string>
+    <string name="trtcvoiceroom_create_voiceroom">Create a chat room</string>
+    <string name="trtcvoiceroom_create_topic">Topic</string>
+    <string name="trtcvoiceroom_create_topic_hint">Please input the room topic</string>
+    <string name="trtcvoiceroom_create_nickname">Nickname</string>
+    <string name="trtcvoiceroom_create_nickname_hint">Please input a nickname</string>
+    <string name="trtcvoiceroom_create_need_host_agree">Request needs host agree</string>
+    <string name="trtcvoiceroom_quality">Quality</string>
+    <string name="trtcvoiceroom_quality_standard">Standard</string>
+    <string name="trtcvoiceroom_quality_music">Music</string>
+    <string name="trtcvoiceroom_create_button">Create a chat room</string>
+    <string name="trtcvoiceroom_enter_room_hint">%s enter room</string>
+    <string name="trtcvoiceroom_exit">Exit?</string>
+    <string name="trtcvoiceroom_choose_hint">Choose</string>
+    <string name="trtcvoiceroom_cancel">Cancel</string>
+    <string name="trtcvoiceroom_anchor_exit_room">%s exit room</string>
+</resources>

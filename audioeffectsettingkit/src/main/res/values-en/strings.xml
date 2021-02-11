@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="audio_effect_setting_title">Sound setting</string>
+    <string name="audio_effect_setting_bgm_title">background music</string>
+    <string name="audio_effect_setting_panel_close">close</string>
+    <string name="audio_effect_setting_panel_select_song">Select</string>
+    <string name="audio_effect_setting_panel_music_volume">Music volume</string>
+    <string name="audio_effect_setting_panel_mic_volume">Mic volume</string>
+    <string name="audio_effect_setting_panel_music_pitch">Music rise and fall</string>
+    <string name="audio_effect_setting_panel_changer">Voice change</string>
+    <string name="audio_effect_setting_panel_reverb">Reverb</string>
+
+    <string name="audio_effect_setting_changetype_original">original</string>
+    <string name="audio_effect_setting_changetype_child">naughty baby</string>
+    <string name="audio_effect_setting_changetype_luoli">little girl</string>
+    <string name="audio_effect_setting_changetype_dashu">uncle</string>
+    <string name="audio_effect_setting_changetype_metal">heavy metals</string>
+    <string name="audio_effect_setting_changetype_sick">cold</string>
+    <string name="audio_effect_setting_changetype_punk">punk</string>
+    <string name="audio_effect_setting_changetype_kunsou">trapped beast</string>
+    <string name="audio_effect_setting_changetype_feizai">fat</string>
+    <string name="audio_effect_setting_changetype_dianliu">strong current</string>
+    <string name="audio_effect_setting_changetype_machine">heavy machinery</string>
+    <string name="audio_effect_setting_changetype_kongling">emptiness</string>
+
+    <string name="audio_effect_setting_reverbtype_origin">original</string>
+    <string name="audio_effect_setting_reverbtype_ktv">KTV</string>
+    <string name="audio_effect_setting_reverbtype_room">little room</string>
+    <string name="audio_effect_setting_reverbtype_meeting">hall</string>
+    <string name="audio_effect_setting_reverbtype_lowdeep">deep</string>
+    <string name="audio_effect_setting_reverbtype_hongliang">loud</string>
+    <string name="audio_effect_setting_reverbtype_heavymetal">metal sound</string>
+    <string name="audio_effect_setting_reverbtype_cixing">magnetic</string>
+
+
+</resources>
