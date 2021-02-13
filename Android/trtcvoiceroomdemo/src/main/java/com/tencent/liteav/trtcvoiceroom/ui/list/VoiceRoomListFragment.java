@@ -112,7 +112,7 @@ public class VoiceRoomListFragment extends Fragment implements SwipeRefreshLayou
         String userName    = ProfileManager.getInstance().getUserModel().userName;
         String userAvatar  = ProfileManager.getInstance().getUserModel().userAvatar;
         String coverAvatar = ProfileManager.getInstance().getUserModel().userAvatar;
-        VoiceRoomAnchorActivity.createRoom(getActivity(), roomName, userId, userName, userAvatar, coverAvatar, TRTCCloudDef.TRTC_AUDIO_QUALITY_MUSIC, true);
+        VoiceRoomAnchorActivity.createRoom(getActivity(), roomName, userId, userName, userAvatar, coverAvatar, TRTCCloudDef.TRTC_AUDIO_QUALITY_DEFAULT, true);
     }
 
     private void createRoom() {
@@ -127,7 +127,7 @@ public class VoiceRoomListFragment extends Fragment implements SwipeRefreshLayou
     }
 
     private void enterRoom(RoomEntity info) {
-        VoiceRoomAudienceActivity.enterRoom(getActivity(), Integer.valueOf(info.roomId), mSelfUserId, TRTCCloudDef.TRTC_AUDIO_QUALITY_MUSIC);
+        VoiceRoomAudienceActivity.enterRoom(getActivity(), Integer.valueOf(info.roomId), mSelfUserId, TRTCCloudDef.TRTC_AUDIO_QUALITY_DEFAULT);
     }
 
     @Override

@@ -195,7 +195,7 @@ public class VoiceRoomBaseActivity extends AppCompatActivity implements VoiceRoo
         mNeedRequest = intent.getBooleanExtra(VOICEROOM_NEED_REQUEST, false);
         mUserAvatar = intent.getStringExtra(VOICEROOM_USER_AVATAR);
         mRoomCover = intent.getStringExtra(VOICEROOM_ROOM_COVER);
-        mAudioQuality = intent.getIntExtra(VOICEROOM_AUDIO_QUALITY, TRTCCloudDef.TRTC_AUDIO_QUALITY_MUSIC);
+        mAudioQuality = intent.getIntExtra(VOICEROOM_AUDIO_QUALITY, TRTCCloudDef.TRTC_AUDIO_QUALITY_DEFAULT);
         //        mSeatCount = intent.getIntExtra(VOICEROOM_SEAT_COUNT);
         mTRTCVoiceRoom = TRTCVoiceRoom.sharedInstance(this);
         mTRTCVoiceRoom.setDelegate(this);
