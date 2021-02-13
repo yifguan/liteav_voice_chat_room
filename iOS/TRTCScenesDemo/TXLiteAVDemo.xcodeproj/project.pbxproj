@@ -1,0 +1,1317 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2840D91C24B8562200723FBC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2840D91B24B8562200723FBC /* AudioToolbox.framework */; };
+		2BBABE1CD06BFF5EF53254E2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82EE140CF1AE9219B4D8BC0 /* ProfileViewController.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		402A010624506F740037A219 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 402A010024506F740037A219 /* main.m */; };
+		4040CC4F2497C79400CA4FAA /* TRTCVoiceRoomManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4040CC122497C79300CA4FAA /* TRTCVoiceRoomManager.swift */; };
+		4040CC5F2497C79400CA4FAA /* TRTCVoiceRoomAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4040CC182497C79300CA4FAA /* TRTCVoiceRoomAssets.xcassets */; };
+		4040CC632497C79400CA4FAA /* TRTCCreateVoiceRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4040CC1B2497C79300CA4FAA /* TRTCCreateVoiceRoomViewModel.swift */; };
+		4040CC672497C79400CA4FAA /* TRTCVoiceRoomVIewDataDef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4040CC1C2497C79300CA4FAA /* TRTCVoiceRoomVIewDataDef.swift */; };
+		4040CC6B2497C79400CA4FAA /* TRTCVoiceRoomListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4040CC1D2497C79300CA4FAA /* TRTCVoiceRoomListViewModel.swift */; };
+		4040CC6F2497C79400CA4FAA /* TRTCVoiceRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4040CC1E2497C79300CA4FAA /* TRTCVoiceRoomViewModel.swift */; };
+		4040CC772497C79400CA4FAA /* TRTCVoiceRoomEnteryControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4040CC202497C79300CA4FAA /* TRTCVoiceRoomEnteryControl.swift */; };
+		4040CC7B2497C79400CA4FAA /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4040CC222497C79300CA4FAA /* UIColor+hex.swift */; };
+		4040CC7F2497C79400CA4FAA /* TRTCVoiceRoomMainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4040CC242497C79300CA4FAA /* TRTCVoiceRoomMainMenuView.swift */; };
+		4040CC832497C79400CA4FAA /* TRTCVoiceRoomSeatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4040CC252497C79300CA4FAA /* TRTCVoiceRoomSeatCell.swift */; };
+		4040CC872497C79400CA4FAA /* TRTCVoiceRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4040CC262497C79300CA4FAA /* TRTCVoiceRoomViewController.swift */; };
+		4040CC8B2497C79400CA4FAA /* TRTCVoiceRoomSeatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4040CC272497C79300CA4FAA /* TRTCVoiceRoomSeatView.swift */; };
+		4040CC8F2497C79400CA4FAA /* TRTCVoiceRoomTipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4040CC282497C79300CA4FAA /* TRTCVoiceRoomTipsView.swift */; };
+		4040CC932497C79400CA4FAA /* TRTCAudienceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4040CC292497C79300CA4FAA /* TRTCAudienceTableViewCell.swift */; };
+		4040CC972497C79400CA4FAA /* TRTCVoiceRoomTipsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4040CC2A2497C79300CA4FAA /* TRTCVoiceRoomTipsTableCell.swift */; };
+		4040CC9B2497C79400CA4FAA /* TRTCVoiceRoomMsgInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4040CC2B2497C79300CA4FAA /* TRTCVoiceRoomMsgInputView.swift */; };
+		4040CC9F2497C79400CA4FAA /* TRTCVoiceRoomRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4040CC2C2497C79300CA4FAA /* TRTCVoiceRoomRootView.swift */; };
+		4040CCA32497C79400CA4FAA /* TRTCAudienceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4040CC2D2497C79300CA4FAA /* TRTCAudienceListView.swift */; };
+		4040CCA72497C79400CA4FAA /* TRTCVoiceRoomListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4040CC2F2497C79300CA4FAA /* TRTCVoiceRoomListViewController.swift */; };
+		4040CCAB2497C79400CA4FAA /* TRTCVoiceRoomListRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4040CC302497C79300CA4FAA /* TRTCVoiceRoomListRootView.swift */; };
+		4040CCAF2497C79400CA4FAA /* TRTCVoiceRoomListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4040CC312497C79300CA4FAA /* TRTCVoiceRoomListCell.swift */; };
+		4040CCB32497C79400CA4FAA /* TRTCCreateVoiceRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4040CC332497C79300CA4FAA /* TRTCCreateVoiceRoomViewController.swift */; };
+		4040CCB72497C79400CA4FAA /* TRTCCreateVoiceRoomRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4040CC342497C79300CA4FAA /* TRTCCreateVoiceRoomRootView.swift */; };
+		4046B14A24B36AD700F27349 /* VoiceRoomTRTCService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4046B13524B36AD700F27349 /* VoiceRoomTRTCService.m */; };
+		4046B14E24B36AD700F27349 /* TRTCVoiceRoomDef.m in Sources */ = {isa = PBXBuildFile; fileRef = 4046B13624B36AD700F27349 /* TRTCVoiceRoomDef.m */; };
+		4046B15224B36AD700F27349 /* TXVoiceRoomService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4046B13924B36AD700F27349 /* TXVoiceRoomService.m */; };
+		4046B15624B36AD700F27349 /* TXVoiceRoomIMJsonHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4046B13A24B36AD700F27349 /* TXVoiceRoomIMJsonHandle.m */; };
+		4046B15A24B36AD700F27349 /* TXBaseDef.m in Sources */ = {isa = PBXBuildFile; fileRef = 4046B13E24B36AD700F27349 /* TXBaseDef.m */; };
+		4046B15E24B36AD700F27349 /* TRTCVoiceRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 4046B14124B36AD700F27349 /* TRTCVoiceRoom.m */; };
+		4046B16324B36C0A00F27349 /* TRTCLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4046B16024B36C0A00F27349 /* TRTCLog.swift */; };
+		4090F790246AE23B00EA72A0 /* PortalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4090F78A246AE23B00EA72A0 /* PortalViewController.m */; };
+		4090F791246AE23B00EA72A0 /* Portal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4090F78C246AE23B00EA72A0 /* Portal.storyboard */; };
+		4090F792246AE23B00EA72A0 /* MainMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4090F78E246AE23B00EA72A0 /* MainMenuCell.m */; };
+		4090F794246AE25A00EA72A0 /* TRTCPortalAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4090F793246AE25A00EA72A0 /* TRTCPortalAssets.xcassets */; };
+		40B3F66A2446E518000C37A3 /* UIButton+Glossy.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F8534B1EE8FCDF00EE47D7 /* UIButton+Glossy.m */; };
+		40B3F6762446E518000C37A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F853261EE8FC8400EE47D7 /* AppDelegate.m */; };
+		40B3F6812446E518000C37A3 /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F8534F1EE8FCDF00EE47D7 /* UIView+Additions.m */; };
+		40B3F6852446E518000C37A3 /* NSString+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F853471EE8FCDF00EE47D7 /* NSString+Common.m */; };
+		40B3F6902446E518000C37A3 /* UIButton+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F853491EE8FCDF00EE47D7 /* UIButton+Additions.m */; };
+		40B3F6912446E518000C37A3 /* UIView+CustomAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F853511EE8FCDF00EE47D7 /* UIView+CustomAutoLayout.m */; };
+		40B3F6922446E518000C37A3 /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A03ED3F1FD13DFB00F2F063 /* UIViewController+BackButtonHandler.m */; };
+		40B3F6942446E518000C37A3 /* AppLogMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F853281EE8FC8400EE47D7 /* AppLogMgr.m */; };
+		40B3F6972446E518000C37A3 /* NSObject+CommonBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F853451EE8FCDF00EE47D7 /* NSObject+CommonBlock.m */; };
+		40B3F69F2446E518000C37A3 /* NSData+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F853431EE8FCDF00EE47D7 /* NSData+Common.m */; };
+		40B3F6AA2446E518000C37A3 /* UIImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F8534D1EE8FCDF00EE47D7 /* UIImage+Additions.m */; };
+		40B3F6AF2446E518000C37A3 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 91F87A7E1FF4A0FC001644B1 /* libsqlite3.tbd */; };
+		40B3F6B02446E518000C37A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40407ACA1F3035CA006C7301 /* Foundation.framework */; };
+		40B3F6B22446E518000C37A3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F8553C1EE8FDC500EE47D7 /* AVFoundation.framework */; };
+		40B3F6B32446E518000C37A3 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51A4AD391F1F8AE300B4A806 /* MediaPlayer.framework */; };
+		40B3F6B42446E518000C37A3 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F8554E1EE8FE0100EE47D7 /* libiconv.tbd */; };
+		40B3F6B52446E518000C37A3 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F8554C1EE8FDFC00EE47D7 /* libz.tbd */; };
+		40B3F6B62446E518000C37A3 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CE45D2971F15C527003506D1 /* libc++.tbd */; };
+		40B3F6B72446E518000C37A3 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F855481EE8FDF100EE47D7 /* libresolv.tbd */; };
+		40B3F6B82446E518000C37A3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F855461EE8FDE800EE47D7 /* SystemConfiguration.framework */; };
+		40B3F6B92446E518000C37A3 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F855441EE8FDE100EE47D7 /* CoreTelephony.framework */; };
+		40B3F6BA2446E518000C37A3 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F855421EE8FDDA00EE47D7 /* VideoToolbox.framework */; };
+		40B3F6BB2446E518000C37A3 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F855401EE8FDD300EE47D7 /* CoreMedia.framework */; };
+		40B3F6BC2446E518000C37A3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F8553E1EE8FDCC00EE47D7 /* CoreGraphics.framework */; };
+		40B3F6BD2446E518000C37A3 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F8553A1EE8FDBF00EE47D7 /* Accelerate.framework */; };
+		40B3F6BE2446E518000C37A3 /* TXLiteAVSDK_TRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45736E97243F5B2200F7F601 /* TXLiteAVSDK_TRTC.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		40B3F6BF2446E518000C37A3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F855381EE8FDB600EE47D7 /* Security.framework */; };
+		40B3F6C02446E518000C37A3 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F855361EE8FDAD00EE47D7 /* AssetsLibrary.framework */; };
+		40B3F6C72446E518000C37A3 /* FilterResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6E4A1FC2C5320095663F /* FilterResource.bundle */; };
+		40B3F6C82446E518000C37A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40F853311EE8FC9B00EE47D7 /* LaunchScreen.storyboard */; };
+		40B3F6CA2446E518000C37A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40F853221EE8FC7300EE47D7 /* Assets.xcassets */; };
+		40B3F6CC2446E518000C37A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40F853331EE8FC9B00EE47D7 /* Main.storyboard */; };
+		40B3F9722446E6C6000C37A3 /* GenerateTestUserSig.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B3F8DC2446E6C5000C37A3 /* GenerateTestUserSig.m */; };
+		40B3F9DF2446EF11000C37A3 /* TCLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B3F9DA2446EF11000C37A3 /* TCLog.m */; };
+		40B3F9E22446EF11000C37A3 /* TCUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B3F9DD2446EF11000C37A3 /* TCUtil.m */; };
+		40B3F9FF2447042C000C37A3 /* HUDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B3F9FD2447042B000C37A3 /* HUDHelper.m */; };
+		40B3FA022447056D000C37A3 /* UIColor+MLPFlatColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B3FA002447056D000C37A3 /* UIColor+MLPFlatColors.m */; };
+		40B5C68C2484BBFC00D3A718 /* AudioEffectSettingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40B5C6832484BBE500D3A718 /* AudioEffectSettingKit.framework */; };
+		40B5C6942484BE4800D3A718 /* AudioEffectSettingKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 40B5C6872484BBE500D3A718 /* AudioEffectSettingKitResources.bundle */; };
+		40E1F4492468F74A00F3D350 /* NSString+UISize.m in Sources */ = {isa = PBXBuildFile; fileRef = 457FD2F921C7530C00EEB03F /* NSString+UISize.m */; };
+		40E1F44F2468F75300F3D350 /* NSDictionary+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A395A02234AEE9700AFBCE8 /* NSDictionary+Common.m */; };
+		40E25FCE2480C797005EB543 /* Portal+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E25FCC2480C796005EB543 /* Portal+Swift.swift */; };
+		5DC3DC322CD58492B41F3455 /* LoginViewController+UI_Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E422C03E29D761DF32201A4 /* LoginViewController+UI_Mock.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5F1C7A4495A350081E0CF34C /* CommonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD30403231D9FEF49E09533F /* CommonUtils.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6A50323624A1A68E00701E6B /* UserProtocol.html in Resources */ = {isa = PBXBuildFile; fileRef = 6A50322E24A1A68E00701E6B /* UserProtocol.html */; };
+		6F02F39DEDE545442C6BDA52 /* ProfileManager_Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60101D2C42AA2F37D04CD587 /* ProfileManager_Mock.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BD32F8A6AF7CC2FF9A53096E /* libPods-TXLiteAVDemo_TRTC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A32AD4BB38080AB19D3659FC /* libPods-TXLiteAVDemo_TRTC.a */; };
+		DBAAA2306954433FA6A66ED6 /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80725CC766497EA33A06527D /* AppUtils.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DE377520D779EB30037F84C7 /* LoginViewController_Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CB7B0BE668C7B577DE8896 /* LoginViewController_Mock.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EA260842F19110F1364530B7 /* ProfileViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB1F9AF446AC55A465767F2 /* ProfileViewController+UI.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		40A49D6424598CD700BFCB18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40A49D5E24598CD200BFCB18 /* UGCKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 453DE2D6237945B10083E759;
+			remoteInfo = UGCKit;
+		};
+		40A49D6624598CD700BFCB18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 40A49D5E24598CD200BFCB18 /* UGCKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 454616C223797C39009CDF83;
+			remoteInfo = UGCKitResources;
+		};
+		40B5C6822484BBE500D3A718 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 401A9B3D247FCC7600C0763B /* AudioEffectSettingKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 40AF719A247D036200EBB371;
+			remoteInfo = AudioEffectSettingKit;
+		};
+		40B5C6862484BBE500D3A718 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 401A9B3D247FCC7600C0763B /* AudioEffectSettingKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 40AF71C9247D08F700EBB371;
+			remoteInfo = AudioEffectSettingKitResources;
+		};
+		40B5C68A2484BBF600D3A718 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 401A9B3D247FCC7600C0763B /* AudioEffectSettingKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 40AF71C8247D08F700EBB371;
+			remoteInfo = AudioEffectSettingKitResources;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4074E62C249F0F30006C591F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		45F21F7E244712F6006B8B4D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0DB1F9AF446AC55A465767F2 /* ProfileViewController+UI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "ProfileViewController+UI.swift"; sourceTree = "<group>"; };
+		1E422C03E29D761DF32201A4 /* LoginViewController+UI_Mock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "LoginViewController+UI_Mock.swift"; sourceTree = "<group>"; };
+		2840D91B24B8562200723FBC /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		30CB7B0BE668C7B577DE8896 /* LoginViewController_Mock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginViewController_Mock.swift; sourceTree = "<group>"; };
+		4004FF601EC7FB44D81E5934 /* Pods-TXReplaykitUpload_TRTC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TXReplaykitUpload_TRTC.release.xcconfig"; path = "Target Support Files/Pods-TXReplaykitUpload_TRTC/Pods-TXReplaykitUpload_TRTC.release.xcconfig"; sourceTree = "<group>"; };
+		401A9B3D247FCC7600C0763B /* AudioEffectSettingKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = AudioEffectSettingKit.xcodeproj; sourceTree = "<group>"; };
+		402A00DD2450552E0037A219 /* TXLiteAVDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TXLiteAVDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		402A010024506F740037A219 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = App/main.m; sourceTree = "<group>"; };
+		402A010724506F9C0037A219 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = App/Info.plist; sourceTree = "<group>"; };
+		40407ACA1F3035CA006C7301 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4040CC122497C79300CA4FAA /* TRTCVoiceRoomManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRTCVoiceRoomManager.swift; sourceTree = "<group>"; };
+		4040CC182497C79300CA4FAA /* TRTCVoiceRoomAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TRTCVoiceRoomAssets.xcassets; sourceTree = "<group>"; };
+		4040CC1B2497C79300CA4FAA /* TRTCCreateVoiceRoomViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRTCCreateVoiceRoomViewModel.swift; sourceTree = "<group>"; };
+		4040CC1C2497C79300CA4FAA /* TRTCVoiceRoomVIewDataDef.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRTCVoiceRoomVIewDataDef.swift; sourceTree = "<group>"; };
+		4040CC1D2497C79300CA4FAA /* TRTCVoiceRoomListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRTCVoiceRoomListViewModel.swift; sourceTree = "<group>"; };
+		4040CC1E2497C79300CA4FAA /* TRTCVoiceRoomViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRTCVoiceRoomViewModel.swift; sourceTree = "<group>"; };
+		4040CC202497C79300CA4FAA /* TRTCVoiceRoomEnteryControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRTCVoiceRoomEnteryControl.swift; sourceTree = "<group>"; };
+		4040CC222497C79300CA4FAA /* UIColor+hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+hex.swift"; sourceTree = "<group>"; };
+		4040CC242497C79300CA4FAA /* TRTCVoiceRoomMainMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRTCVoiceRoomMainMenuView.swift; sourceTree = "<group>"; };
+		4040CC252497C79300CA4FAA /* TRTCVoiceRoomSeatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRTCVoiceRoomSeatCell.swift; sourceTree = "<group>"; };
+		4040CC262497C79300CA4FAA /* TRTCVoiceRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRTCVoiceRoomViewController.swift; sourceTree = "<group>"; };
+		4040CC272497C79300CA4FAA /* TRTCVoiceRoomSeatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRTCVoiceRoomSeatView.swift; sourceTree = "<group>"; };
+		4040CC282497C79300CA4FAA /* TRTCVoiceRoomTipsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRTCVoiceRoomTipsView.swift; sourceTree = "<group>"; };
+		4040CC292497C79300CA4FAA /* TRTCAudienceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRTCAudienceTableViewCell.swift; sourceTree = "<group>"; };
+		4040CC2A2497C79300CA4FAA /* TRTCVoiceRoomTipsTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRTCVoiceRoomTipsTableCell.swift; sourceTree = "<group>"; };
+		4040CC2B2497C79300CA4FAA /* TRTCVoiceRoomMsgInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRTCVoiceRoomMsgInputView.swift; sourceTree = "<group>"; };
+		4040CC2C2497C79300CA4FAA /* TRTCVoiceRoomRootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRTCVoiceRoomRootView.swift; sourceTree = "<group>"; };
+		4040CC2D2497C79300CA4FAA /* TRTCAudienceListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRTCAudienceListView.swift; sourceTree = "<group>"; };
+		4040CC2F2497C79300CA4FAA /* TRTCVoiceRoomListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRTCVoiceRoomListViewController.swift; sourceTree = "<group>"; };
+		4040CC302497C79300CA4FAA /* TRTCVoiceRoomListRootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRTCVoiceRoomListRootView.swift; sourceTree = "<group>"; };
+		4040CC312497C79300CA4FAA /* TRTCVoiceRoomListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRTCVoiceRoomListCell.swift; sourceTree = "<group>"; };
+		4040CC332497C79300CA4FAA /* TRTCCreateVoiceRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRTCCreateVoiceRoomViewController.swift; sourceTree = "<group>"; };
+		4040CC342497C79300CA4FAA /* TRTCCreateVoiceRoomRootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRTCCreateVoiceRoomRootView.swift; sourceTree = "<group>"; };
+		4046B13424B36AD700F27349 /* VoiceRoomTRTCService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceRoomTRTCService.h; sourceTree = "<group>"; };
+		4046B13524B36AD700F27349 /* VoiceRoomTRTCService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoiceRoomTRTCService.m; sourceTree = "<group>"; };
+		4046B13624B36AD700F27349 /* TRTCVoiceRoomDef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRTCVoiceRoomDef.m; sourceTree = "<group>"; };
+		4046B13824B36AD700F27349 /* TXVoiceRoomIMJsonHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXVoiceRoomIMJsonHandle.h; sourceTree = "<group>"; };
+		4046B13924B36AD700F27349 /* TXVoiceRoomService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXVoiceRoomService.m; sourceTree = "<group>"; };
+		4046B13A24B36AD700F27349 /* TXVoiceRoomIMJsonHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXVoiceRoomIMJsonHandle.m; sourceTree = "<group>"; };
+		4046B13B24B36AD700F27349 /* TXVoiceRoomService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXVoiceRoomService.h; sourceTree = "<group>"; };
+		4046B13E24B36AD700F27349 /* TXBaseDef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXBaseDef.m; sourceTree = "<group>"; };
+		4046B13F24B36AD700F27349 /* TXVoiceRoomCommonDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXVoiceRoomCommonDef.h; sourceTree = "<group>"; };
+		4046B14024B36AD700F27349 /* TXBaseDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXBaseDef.h; sourceTree = "<group>"; };
+		4046B14124B36AD700F27349 /* TRTCVoiceRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRTCVoiceRoom.m; sourceTree = "<group>"; };
+		4046B14224B36AD700F27349 /* TRTCVoiceRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRTCVoiceRoom.h; sourceTree = "<group>"; };
+		4046B14324B36AD700F27349 /* TRTCVoiceRoomDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRTCVoiceRoomDef.h; sourceTree = "<group>"; };
+		4046B16024B36C0A00F27349 /* TRTCLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRTCLog.swift; sourceTree = "<group>"; };
+		40495B9E2459713400AF53CB /* TXLiteAVDemo_TRTCRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TXLiteAVDemo_TRTCRelease.entitlements; sourceTree = "<group>"; };
+		4071CF702444477A000B7707 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		4072566824B55D5000DD44EF /* TRTCVoiceRoomDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRTCVoiceRoomDelegate.h; sourceTree = "<group>"; };
+		4074E61B249F057F006C591F /* libPods-TXReplaykitUpload_TRTC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-TXReplaykitUpload_TRTC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4074E61D249F0594006C591F /* libPods-TXReplaykitUpload_TRTC_AppStore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-TXReplaykitUpload_TRTC_AppStore.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		40802A272484BBBE008151C1 /* AudioEffectSettingKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AudioEffectSettingKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4090F78A246AE23B00EA72A0 /* PortalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PortalViewController.m; sourceTree = "<group>"; };
+		4090F78B246AE23B00EA72A0 /* MainMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuCell.h; sourceTree = "<group>"; };
+		4090F78C246AE23B00EA72A0 /* Portal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Portal.storyboard; sourceTree = "<group>"; };
+		4090F78D246AE23B00EA72A0 /* PortalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PortalViewController.h; sourceTree = "<group>"; };
+		4090F78E246AE23B00EA72A0 /* MainMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuCell.m; sourceTree = "<group>"; };
+		4090F78F246AE23B00EA72A0 /* ColorMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorMacro.h; sourceTree = "<group>"; };
+		4090F793246AE25A00EA72A0 /* TRTCPortalAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TRTCPortalAssets.xcassets; sourceTree = "<group>"; };
+		40A49D5E24598CD200BFCB18 /* UGCKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UGCKit.xcodeproj; path = UGCKit/UGCKit.xcodeproj; sourceTree = "<group>"; };
+		40AA539724459DF900303EF7 /* UGCKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UGCKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40AC7322246D35A300FAF33D /* TXLiteAVDemo_TRTC_AppStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TXLiteAVDemo_TRTC_AppStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		40B3F6D22446E518000C37A3 /* TXLiteAVDemo_TRTC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TXLiteAVDemo_TRTC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		40B3F8DC2446E6C5000C37A3 /* GenerateTestUserSig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenerateTestUserSig.m; sourceTree = "<group>"; };
+		40B3F8DD2446E6C5000C37A3 /* GenerateTestUserSig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenerateTestUserSig.h; sourceTree = "<group>"; };
+		40B3F9D92446EF11000C37A3 /* TCUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCUtil.h; sourceTree = "<group>"; };
+		40B3F9DA2446EF11000C37A3 /* TCLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCLog.m; sourceTree = "<group>"; };
+		40B3F9DD2446EF11000C37A3 /* TCUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCUtil.m; sourceTree = "<group>"; };
+		40B3F9DE2446EF11000C37A3 /* TCLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCLog.h; sourceTree = "<group>"; };
+		40B3F9FD2447042B000C37A3 /* HUDHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDHelper.m; sourceTree = "<group>"; };
+		40B3F9FE2447042C000C37A3 /* HUDHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDHelper.h; sourceTree = "<group>"; };
+		40B3FA002447056D000C37A3 /* UIColor+MLPFlatColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MLPFlatColors.m"; sourceTree = "<group>"; };
+		40B3FA012447056D000C37A3 /* UIColor+MLPFlatColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MLPFlatColors.h"; sourceTree = "<group>"; };
+		40E25FCC2480C796005EB543 /* Portal+Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Portal+Swift.swift"; sourceTree = "<group>"; };
+		40F853221EE8FC7300EE47D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		40F853251EE8FC8400EE47D7 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		40F853261EE8FC8400EE47D7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		40F853271EE8FC8400EE47D7 /* AppLogMgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppLogMgr.h; sourceTree = "<group>"; };
+		40F853281EE8FC8400EE47D7 /* AppLogMgr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppLogMgr.m; sourceTree = "<group>"; };
+		40F853321EE8FC9B00EE47D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		40F853341EE8FC9B00EE47D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		40F853421EE8FCDF00EE47D7 /* NSData+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Common.h"; sourceTree = "<group>"; };
+		40F853431EE8FCDF00EE47D7 /* NSData+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Common.m"; sourceTree = "<group>"; };
+		40F853441EE8FCDF00EE47D7 /* NSObject+CommonBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CommonBlock.h"; sourceTree = "<group>"; };
+		40F853451EE8FCDF00EE47D7 /* NSObject+CommonBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CommonBlock.m"; sourceTree = "<group>"; };
+		40F853461EE8FCDF00EE47D7 /* NSString+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Common.h"; sourceTree = "<group>"; };
+		40F853471EE8FCDF00EE47D7 /* NSString+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Common.m"; sourceTree = "<group>"; };
+		40F853481EE8FCDF00EE47D7 /* UIButton+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Additions.h"; sourceTree = "<group>"; };
+		40F853491EE8FCDF00EE47D7 /* UIButton+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Additions.m"; sourceTree = "<group>"; };
+		40F8534A1EE8FCDF00EE47D7 /* UIButton+Glossy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Glossy.h"; sourceTree = "<group>"; };
+		40F8534B1EE8FCDF00EE47D7 /* UIButton+Glossy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Glossy.m"; sourceTree = "<group>"; };
+		40F8534C1EE8FCDF00EE47D7 /* UIImage+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Additions.h"; sourceTree = "<group>"; };
+		40F8534D1EE8FCDF00EE47D7 /* UIImage+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Additions.m"; sourceTree = "<group>"; };
+		40F8534E1EE8FCDF00EE47D7 /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
+		40F8534F1EE8FCDF00EE47D7 /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
+		40F853501EE8FCDF00EE47D7 /* UIView+CustomAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CustomAutoLayout.h"; sourceTree = "<group>"; };
+		40F853511EE8FCDF00EE47D7 /* UIView+CustomAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CustomAutoLayout.m"; sourceTree = "<group>"; };
+		40F853531EE8FCDF00EE47D7 /* ColorMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorMacro.h; sourceTree = "<group>"; };
+		40F855361EE8FDAD00EE47D7 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		40F855381EE8FDB600EE47D7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		40F8553A1EE8FDBF00EE47D7 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		40F8553C1EE8FDC500EE47D7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		40F8553E1EE8FDCC00EE47D7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		40F855401EE8FDD300EE47D7 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		40F855421EE8FDDA00EE47D7 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		40F855441EE8FDE100EE47D7 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		40F855461EE8FDE800EE47D7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		40F855481EE8FDF100EE47D7 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		40F8554C1EE8FDFC00EE47D7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		40F8554E1EE8FE0100EE47D7 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		45736E97243F5B2200F7F601 /* TXLiteAVSDK_TRTC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TXLiteAVSDK_TRTC.framework; sourceTree = "<group>"; };
+		457FD2F821C7530C00EEB03F /* NSString+UISize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+UISize.h"; sourceTree = "<group>"; };
+		457FD2F921C7530C00EEB03F /* NSString+UISize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+UISize.m"; sourceTree = "<group>"; };
+		45C37797226765A60054D0B8 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		45CC58AA246290BB002A914E /* SimpleIPC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleIPC.m; sourceTree = "<group>"; };
+		45CC58AB246290BB002A914E /* SimpleIPC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleIPC.h; sourceTree = "<group>"; };
+		4B4B291177070EC8D226E1E2 /* Pods-TXLiteAVDemo_TRTC_AppStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TXLiteAVDemo_TRTC_AppStore.release.xcconfig"; path = "Target Support Files/Pods-TXLiteAVDemo_TRTC_AppStore/Pods-TXLiteAVDemo_TRTC_AppStore.release.xcconfig"; sourceTree = "<group>"; };
+		51A289F8230FB93A00B9B73F /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		51A4AD391F1F8AE300B4A806 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		5BD8B4F3BB859A4568C43B7D /* Pods-TXLiteAVDemo_TRTC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TXLiteAVDemo_TRTC.debug.xcconfig"; path = "Target Support Files/Pods-TXLiteAVDemo_TRTC/Pods-TXLiteAVDemo_TRTC.debug.xcconfig"; sourceTree = "<group>"; };
+		5F28DD5C7D1447D301DA8208 /* Pods-TXReplaykitUpload_TRTC_AppStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TXReplaykitUpload_TRTC_AppStore.debug.xcconfig"; path = "Target Support Files/Pods-TXReplaykitUpload_TRTC_AppStore/Pods-TXReplaykitUpload_TRTC_AppStore.debug.xcconfig"; sourceTree = "<group>"; };
+		60101D2C42AA2F37D04CD587 /* ProfileManager_Mock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileManager_Mock.swift; sourceTree = "<group>"; };
+		6A03ED3F1FD13DFB00F2F063 /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
+		6A03ED401FD13DFB00F2F063 /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
+		6A395A01234AEE9700AFBCE8 /* NSDictionary+Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Common.h"; sourceTree = "<group>"; };
+		6A395A02234AEE9700AFBCE8 /* NSDictionary+Common.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Common.m"; sourceTree = "<group>"; };
+		6A503178249D03B200701E6B /* TRTCInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TRTCInfo.plist; sourceTree = "<group>"; };
+		6A50318D249D03E000701E6B /* TXReplaykitUpload_TRTC_AppStore.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TXReplaykitUpload_TRTC_AppStore.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A50322E24A1A68E00701E6B /* UserProtocol.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = UserProtocol.html; sourceTree = "<group>"; };
+		6AAEC38A2499E08100B57D86 /* TXLiteAVSDK_ReplayKitExt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TXLiteAVSDK_ReplayKitExt.framework; sourceTree = "<group>"; };
+		78833A06B3E3C43A9C3CD304 /* Pods-TXReplaykitUpload_TRTC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TXReplaykitUpload_TRTC.debug.xcconfig"; path = "Target Support Files/Pods-TXReplaykitUpload_TRTC/Pods-TXReplaykitUpload_TRTC.debug.xcconfig"; sourceTree = "<group>"; };
+		80725CC766497EA33A06527D /* AppUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
+		91D47F3920B6B13C0072AC0B /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
+		91D47F3C20B6B13C0072AC0B /* SampleHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleHandler.h; sourceTree = "<group>"; };
+		91D47F3D20B6B13C0072AC0B /* SampleHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleHandler.m; sourceTree = "<group>"; };
+		91D47F3F20B6B13C0072AC0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91F87A7E1FF4A0FC001644B1 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		A256AF019D8E84B3B797494C /* libPods-TXLiteAVDemo_TRTC_AppStore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TXLiteAVDemo_TRTC_AppStore.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A32AD4BB38080AB19D3659FC /* libPods-TXLiteAVDemo_TRTC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TXLiteAVDemo_TRTC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE45D2971F15C527003506D1 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		CE7C6E4A1FC2C5320095663F /* FilterResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FilterResource.bundle; sourceTree = "<group>"; };
+		CF31F0EB1FBB2A7E0066BF7D /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		D650607A20EE145F00C8BC44 /* libc.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libc.tbd; path = usr/lib/libc.tbd; sourceTree = SDKROOT; };
+		D6E5D1C020B7B61F00812B2F /* ReplayKit2Define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplayKit2Define.h; sourceTree = "<group>"; };
+		D82EE140CF1AE9219B4D8BC0 /* ProfileViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		E0D8BC526E0FAB3AC4FA5FB4 /* Pods-TXLiteAVDemo_TRTC_AppStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TXLiteAVDemo_TRTC_AppStore.debug.xcconfig"; path = "Target Support Files/Pods-TXLiteAVDemo_TRTC_AppStore/Pods-TXLiteAVDemo_TRTC_AppStore.debug.xcconfig"; sourceTree = "<group>"; };
+		E95CAD575C1A00021285A090 /* Pods-TXLiteAVDemo_TRTC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TXLiteAVDemo_TRTC.release.xcconfig"; path = "Target Support Files/Pods-TXLiteAVDemo_TRTC/Pods-TXLiteAVDemo_TRTC.release.xcconfig"; sourceTree = "<group>"; };
+		FC847F58E175350391991E4C /* Pods-TXReplaykitUpload_TRTC_AppStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TXReplaykitUpload_TRTC_AppStore.release.xcconfig"; path = "Target Support Files/Pods-TXReplaykitUpload_TRTC_AppStore/Pods-TXReplaykitUpload_TRTC_AppStore.release.xcconfig"; sourceTree = "<group>"; };
+		FD30403231D9FEF49E09533F /* CommonUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CommonUtils.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		40B3F6AD2446E518000C37A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40B5C68C2484BBFC00D3A718 /* AudioEffectSettingKit.framework in Frameworks */,
+				40B3F6AF2446E518000C37A3 /* libsqlite3.tbd in Frameworks */,
+				40B3F6B02446E518000C37A3 /* Foundation.framework in Frameworks */,
+				40B3F6B22446E518000C37A3 /* AVFoundation.framework in Frameworks */,
+				40B3F6B32446E518000C37A3 /* MediaPlayer.framework in Frameworks */,
+				40B3F6B42446E518000C37A3 /* libiconv.tbd in Frameworks */,
+				40B3F6B52446E518000C37A3 /* libz.tbd in Frameworks */,
+				40B3F6B62446E518000C37A3 /* libc++.tbd in Frameworks */,
+				40B3F6B72446E518000C37A3 /* libresolv.tbd in Frameworks */,
+				40B3F6B82446E518000C37A3 /* SystemConfiguration.framework in Frameworks */,
+				2840D91C24B8562200723FBC /* AudioToolbox.framework in Frameworks */,
+				40B3F6B92446E518000C37A3 /* CoreTelephony.framework in Frameworks */,
+				40B3F6BA2446E518000C37A3 /* VideoToolbox.framework in Frameworks */,
+				40B3F6BB2446E518000C37A3 /* CoreMedia.framework in Frameworks */,
+				40B3F6BC2446E518000C37A3 /* CoreGraphics.framework in Frameworks */,
+				40B3F6BD2446E518000C37A3 /* Accelerate.framework in Frameworks */,
+				40B3F6BE2446E518000C37A3 /* TXLiteAVSDK_TRTC.framework in Frameworks */,
+				40B3F6BF2446E518000C37A3 /* Security.framework in Frameworks */,
+				40B3F6C02446E518000C37A3 /* AssetsLibrary.framework in Frameworks */,
+				BD32F8A6AF7CC2FF9A53096E /* libPods-TXLiteAVDemo_TRTC.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		401A9A56247FCC6300C0763B /* AudioSettingKit */ = {
+			isa = PBXGroup;
+			children = (
+				401A9B3D247FCC7600C0763B /* AudioEffectSettingKit.xcodeproj */,
+			);
+			path = AudioSettingKit;
+			sourceTree = "<group>";
+		};
+		402A010A245070290037A219 /* BridgeHeader */ = {
+			isa = PBXGroup;
+			children = (
+				402A00DD2450552E0037A219 /* TXLiteAVDemo-Bridging-Header.h */,
+			);
+			name = BridgeHeader;
+			sourceTree = "<group>";
+		};
+		4040CC192497C79300CA4FAA /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				4040CC202497C79300CA4FAA /* TRTCVoiceRoomEnteryControl.swift */,
+				4040CC182497C79300CA4FAA /* TRTCVoiceRoomAssets.xcassets */,
+				4040CC1A2497C79300CA4FAA /* NetworkRoomManager */,
+				4040CC212497C79300CA4FAA /* UIColor+Extensions */,
+				4040CC232497C79300CA4FAA /* TRTCVoiceRoomViewController */,
+				4040CC2E2497C79300CA4FAA /* TRTCVoiceRoomListViewController */,
+				4040CC322497C79300CA4FAA /* TRTCCreateVoiceRoomViewController */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		4040CC1A2497C79300CA4FAA /* NetworkRoomManager */ = {
+			isa = PBXGroup;
+			children = (
+				4040CC122497C79300CA4FAA /* TRTCVoiceRoomManager.swift */,
+			);
+			path = NetworkRoomManager;
+			sourceTree = "<group>";
+		};
+		4040CC212497C79300CA4FAA /* UIColor+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4046B16024B36C0A00F27349 /* TRTCLog.swift */,
+				4040CC222497C79300CA4FAA /* UIColor+hex.swift */,
+			);
+			path = "UIColor+Extensions";
+			sourceTree = "<group>";
+		};
+		4040CC232497C79300CA4FAA /* TRTCVoiceRoomViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4051D607249C525D00A53E28 /* SubViews */,
+				4040CC262497C79300CA4FAA /* TRTCVoiceRoomViewController.swift */,
+				4040CC2C2497C79300CA4FAA /* TRTCVoiceRoomRootView.swift */,
+				4040CC1E2497C79300CA4FAA /* TRTCVoiceRoomViewModel.swift */,
+				4040CC1C2497C79300CA4FAA /* TRTCVoiceRoomVIewDataDef.swift */,
+			);
+			path = TRTCVoiceRoomViewController;
+			sourceTree = "<group>";
+		};
+		4040CC2E2497C79300CA4FAA /* TRTCVoiceRoomListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4051D606249C523E00A53E28 /* SubViews */,
+				4040CC2F2497C79300CA4FAA /* TRTCVoiceRoomListViewController.swift */,
+				4040CC1D2497C79300CA4FAA /* TRTCVoiceRoomListViewModel.swift */,
+				4040CC302497C79300CA4FAA /* TRTCVoiceRoomListRootView.swift */,
+			);
+			path = TRTCVoiceRoomListViewController;
+			sourceTree = "<group>";
+		};
+		4040CC322497C79300CA4FAA /* TRTCCreateVoiceRoomViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4040CC1B2497C79300CA4FAA /* TRTCCreateVoiceRoomViewModel.swift */,
+				4040CC332497C79300CA4FAA /* TRTCCreateVoiceRoomViewController.swift */,
+				4040CC342497C79300CA4FAA /* TRTCCreateVoiceRoomRootView.swift */,
+			);
+			path = TRTCCreateVoiceRoomViewController;
+			sourceTree = "<group>";
+		};
+		4046B13024B36AD700F27349 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				4046B13124B36AD700F27349 /* Impl */,
+				4046B14224B36AD700F27349 /* TRTCVoiceRoom.h */,
+				4072566824B55D5000DD44EF /* TRTCVoiceRoomDelegate.h */,
+				4046B14324B36AD700F27349 /* TRTCVoiceRoomDef.h */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		4046B13124B36AD700F27349 /* Impl */ = {
+			isa = PBXGroup;
+			children = (
+				4046B14124B36AD700F27349 /* TRTCVoiceRoom.m */,
+				4046B13624B36AD700F27349 /* TRTCVoiceRoomDef.m */,
+				4046B13324B36AD700F27349 /* trtc */,
+				4046B13724B36AD700F27349 /* voiceroom */,
+				4046B13D24B36AD700F27349 /* base */,
+			);
+			path = Impl;
+			sourceTree = "<group>";
+		};
+		4046B13324B36AD700F27349 /* trtc */ = {
+			isa = PBXGroup;
+			children = (
+				4046B13424B36AD700F27349 /* VoiceRoomTRTCService.h */,
+				4046B13524B36AD700F27349 /* VoiceRoomTRTCService.m */,
+			);
+			path = trtc;
+			sourceTree = "<group>";
+		};
+		4046B13724B36AD700F27349 /* voiceroom */ = {
+			isa = PBXGroup;
+			children = (
+				4046B13824B36AD700F27349 /* TXVoiceRoomIMJsonHandle.h */,
+				4046B13924B36AD700F27349 /* TXVoiceRoomService.m */,
+				4046B13A24B36AD700F27349 /* TXVoiceRoomIMJsonHandle.m */,
+				4046B13B24B36AD700F27349 /* TXVoiceRoomService.h */,
+			);
+			path = voiceroom;
+			sourceTree = "<group>";
+		};
+		4046B13D24B36AD700F27349 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				4046B13E24B36AD700F27349 /* TXBaseDef.m */,
+				4046B13F24B36AD700F27349 /* TXVoiceRoomCommonDef.h */,
+				4046B14024B36AD700F27349 /* TXBaseDef.h */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		4051D606249C523E00A53E28 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				4040CC312497C79300CA4FAA /* TRTCVoiceRoomListCell.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		4051D607249C525D00A53E28 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				4040CC242497C79300CA4FAA /* TRTCVoiceRoomMainMenuView.swift */,
+				4040CC252497C79300CA4FAA /* TRTCVoiceRoomSeatCell.swift */,
+				4040CC272497C79300CA4FAA /* TRTCVoiceRoomSeatView.swift */,
+				4040CC282497C79300CA4FAA /* TRTCVoiceRoomTipsView.swift */,
+				4040CC292497C79300CA4FAA /* TRTCAudienceTableViewCell.swift */,
+				4040CC2A2497C79300CA4FAA /* TRTCVoiceRoomTipsTableCell.swift */,
+				4040CC2B2497C79300CA4FAA /* TRTCVoiceRoomMsgInputView.swift */,
+				4040CC2D2497C79300CA4FAA /* TRTCAudienceListView.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		405339102465444D00A6B478 /* AppCommon */ = {
+			isa = PBXGroup;
+			children = (
+				40B3F9D82446EF11000C37A3 /* CommonUtils */,
+				40F853531EE8FCDF00EE47D7 /* ColorMacro.h */,
+				40F853411EE8FCDF00EE47D7 /* Catetory */,
+			);
+			path = AppCommon;
+			sourceTree = "<group>";
+		};
+		4090F789246AE23B00EA72A0 /* Portal */ = {
+			isa = PBXGroup;
+			children = (
+				40E25FCC2480C796005EB543 /* Portal+Swift.swift */,
+				4090F78D246AE23B00EA72A0 /* PortalViewController.h */,
+				4090F78A246AE23B00EA72A0 /* PortalViewController.m */,
+				4090F78B246AE23B00EA72A0 /* MainMenuCell.h */,
+				4090F78C246AE23B00EA72A0 /* Portal.storyboard */,
+				4090F78E246AE23B00EA72A0 /* MainMenuCell.m */,
+				4090F78F246AE23B00EA72A0 /* ColorMacro.h */,
+				4090F793246AE25A00EA72A0 /* TRTCPortalAssets.xcassets */,
+			);
+			path = Portal;
+			sourceTree = "<group>";
+		};
+		40A49D5F24598CD200BFCB18 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				40A49D6524598CD700BFCB18 /* UGCKit.framework */,
+				40A49D6724598CD700BFCB18 /* UGCKitResources.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		40B3F8DB2446E6C5000C37A3 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				40B3F8DC2446E6C5000C37A3 /* GenerateTestUserSig.m */,
+				40B3F8DD2446E6C5000C37A3 /* GenerateTestUserSig.h */,
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
+		40B3F8F52446E6C5000C37A3 /* TRTCVoiceRoomDemo */ = {
+			isa = PBXGroup;
+			children = (
+				4046B13024B36AD700F27349 /* model */,
+				4040CC192497C79300CA4FAA /* ui */,
+			);
+			path = TRTCVoiceRoomDemo;
+			sourceTree = "<group>";
+		};
+		40B3F9D82446EF11000C37A3 /* CommonUtils */ = {
+			isa = PBXGroup;
+			children = (
+				40B3F9DE2446EF11000C37A3 /* TCLog.h */,
+				40B3F9DA2446EF11000C37A3 /* TCLog.m */,
+				40B3F9D92446EF11000C37A3 /* TCUtil.h */,
+				40B3F9DD2446EF11000C37A3 /* TCUtil.m */,
+			);
+			path = CommonUtils;
+			sourceTree = "<group>";
+		};
+		40B5C67D2484BBE500D3A718 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				40B5C6832484BBE500D3A718 /* AudioEffectSettingKit.framework */,
+				40B5C6872484BBE500D3A718 /* AudioEffectSettingKitResources.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		40F852FA1EE8FB3800EE47D7 = {
+			isa = PBXGroup;
+			children = (
+				40495B9E2459713400AF53CB /* TXLiteAVDemo_TRTCRelease.entitlements */,
+				45736E91243F5B2200F7F601 /* SDK */,
+				40F853051EE8FB3800EE47D7 /* TXLiteAVDemo */,
+				91D47F3B20B6B13C0072AC0B /* ReplaykitUpload */,
+				40F854FF1EE8FD2F00EE47D7 /* Frameworks */,
+				40F853041EE8FB3800EE47D7 /* Products */,
+				DE336FBCF7A8A2B1C7E9E0C1 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		40F853041EE8FB3800EE47D7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				40B3F6D22446E518000C37A3 /* TXLiteAVDemo_TRTC.app */,
+				40AC7322246D35A300FAF33D /* TXLiteAVDemo_TRTC_AppStore.app */,
+				6A50318D249D03E000701E6B /* TXReplaykitUpload_TRTC_AppStore.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		40F853051EE8FB3800EE47D7 /* TXLiteAVDemo */ = {
+			isa = PBXGroup;
+			children = (
+				401A9A56247FCC6300C0763B /* AudioSettingKit */,
+				40F853241EE8FC8400EE47D7 /* App */,
+				40B3F8DB2446E6C5000C37A3 /* Debug */,
+				40B3F8F52446E6C5000C37A3 /* TRTCVoiceRoomDemo */,
+				40F8531D1EE8FC1E00EE47D7 /* Supporting Files */,
+				5F489558AC78881B4A54A2AA /* Login */,
+			);
+			path = TXLiteAVDemo;
+			sourceTree = "<group>";
+		};
+		40F8531D1EE8FC1E00EE47D7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				402A010024506F740037A219 /* main.m */,
+				40F853311EE8FC9B00EE47D7 /* LaunchScreen.storyboard */,
+				40F853331EE8FC9B00EE47D7 /* Main.storyboard */,
+				402A010724506F9C0037A219 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		40F853241EE8FC8400EE47D7 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				4090F789246AE23B00EA72A0 /* Portal */,
+				40F853721EE8FD0700EE47D7 /* Resource */,
+				405339102465444D00A6B478 /* AppCommon */,
+				402A010A245070290037A219 /* BridgeHeader */,
+				40F853251EE8FC8400EE47D7 /* AppDelegate.h */,
+				40F853261EE8FC8400EE47D7 /* AppDelegate.m */,
+				40F853271EE8FC8400EE47D7 /* AppLogMgr.h */,
+				40F853281EE8FC8400EE47D7 /* AppLogMgr.m */,
+				D6E5D1C020B7B61F00812B2F /* ReplayKit2Define.h */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		40F853411EE8FCDF00EE47D7 /* Catetory */ = {
+			isa = PBXGroup;
+			children = (
+				40B3FA012447056D000C37A3 /* UIColor+MLPFlatColors.h */,
+				40B3FA002447056D000C37A3 /* UIColor+MLPFlatColors.m */,
+				40B3F9FE2447042C000C37A3 /* HUDHelper.h */,
+				40B3F9FD2447042B000C37A3 /* HUDHelper.m */,
+				6A03ED401FD13DFB00F2F063 /* UIViewController+BackButtonHandler.h */,
+				6A03ED3F1FD13DFB00F2F063 /* UIViewController+BackButtonHandler.m */,
+				40F853421EE8FCDF00EE47D7 /* NSData+Common.h */,
+				40F853431EE8FCDF00EE47D7 /* NSData+Common.m */,
+				40F853441EE8FCDF00EE47D7 /* NSObject+CommonBlock.h */,
+				40F853451EE8FCDF00EE47D7 /* NSObject+CommonBlock.m */,
+				40F853461EE8FCDF00EE47D7 /* NSString+Common.h */,
+				40F853471EE8FCDF00EE47D7 /* NSString+Common.m */,
+				40F853481EE8FCDF00EE47D7 /* UIButton+Additions.h */,
+				40F853491EE8FCDF00EE47D7 /* UIButton+Additions.m */,
+				40F8534A1EE8FCDF00EE47D7 /* UIButton+Glossy.h */,
+				40F8534B1EE8FCDF00EE47D7 /* UIButton+Glossy.m */,
+				40F8534C1EE8FCDF00EE47D7 /* UIImage+Additions.h */,
+				40F8534D1EE8FCDF00EE47D7 /* UIImage+Additions.m */,
+				40F8534E1EE8FCDF00EE47D7 /* UIView+Additions.h */,
+				40F8534F1EE8FCDF00EE47D7 /* UIView+Additions.m */,
+				40F853501EE8FCDF00EE47D7 /* UIView+CustomAutoLayout.h */,
+				40F853511EE8FCDF00EE47D7 /* UIView+CustomAutoLayout.m */,
+				457FD2F821C7530C00EEB03F /* NSString+UISize.h */,
+				457FD2F921C7530C00EEB03F /* NSString+UISize.m */,
+				6A395A01234AEE9700AFBCE8 /* NSDictionary+Common.h */,
+				6A395A02234AEE9700AFBCE8 /* NSDictionary+Common.m */,
+			);
+			path = Catetory;
+			sourceTree = "<group>";
+		};
+		40F853721EE8FD0700EE47D7 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				6A50322E24A1A68E00701E6B /* UserProtocol.html */,
+				40F853221EE8FC7300EE47D7 /* Assets.xcassets */,
+				CE7C6E4A1FC2C5320095663F /* FilterResource.bundle */,
+				45C37797226765A60054D0B8 /* Settings.bundle */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		40F854FF1EE8FD2F00EE47D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2840D91B24B8562200723FBC /* AudioToolbox.framework */,
+				4074E61D249F0594006C591F /* libPods-TXReplaykitUpload_TRTC_AppStore.a */,
+				4074E61B249F057F006C591F /* libPods-TXReplaykitUpload_TRTC.a */,
+				40802A272484BBBE008151C1 /* AudioEffectSettingKit.framework */,
+				40AA539724459DF900303EF7 /* UGCKit.framework */,
+				4071CF702444477A000B7707 /* libsqlite3.0.tbd */,
+				51A289F8230FB93A00B9B73F /* OpenAL.framework */,
+				D650607A20EE145F00C8BC44 /* libc.tbd */,
+				91F87A7E1FF4A0FC001644B1 /* libsqlite3.tbd */,
+				CF31F0EB1FBB2A7E0066BF7D /* Metal.framework */,
+				40407ACA1F3035CA006C7301 /* Foundation.framework */,
+				51A4AD391F1F8AE300B4A806 /* MediaPlayer.framework */,
+				CE45D2971F15C527003506D1 /* libc++.tbd */,
+				40F8554E1EE8FE0100EE47D7 /* libiconv.tbd */,
+				40F8554C1EE8FDFC00EE47D7 /* libz.tbd */,
+				40F855481EE8FDF100EE47D7 /* libresolv.tbd */,
+				40F855461EE8FDE800EE47D7 /* SystemConfiguration.framework */,
+				40F855441EE8FDE100EE47D7 /* CoreTelephony.framework */,
+				40F855421EE8FDDA00EE47D7 /* VideoToolbox.framework */,
+				40F855401EE8FDD300EE47D7 /* CoreMedia.framework */,
+				40F8553E1EE8FDCC00EE47D7 /* CoreGraphics.framework */,
+				40F8553C1EE8FDC500EE47D7 /* AVFoundation.framework */,
+				40F8553A1EE8FDBF00EE47D7 /* Accelerate.framework */,
+				40F855381EE8FDB600EE47D7 /* Security.framework */,
+				40F855361EE8FDAD00EE47D7 /* AssetsLibrary.framework */,
+				91D47F3920B6B13C0072AC0B /* ReplayKit.framework */,
+				A32AD4BB38080AB19D3659FC /* libPods-TXLiteAVDemo_TRTC.a */,
+				A256AF019D8E84B3B797494C /* libPods-TXLiteAVDemo_TRTC_AppStore.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		45736E91243F5B2200F7F601 /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				6AAEC38A2499E08100B57D86 /* TXLiteAVSDK_ReplayKitExt.framework */,
+				45736E97243F5B2200F7F601 /* TXLiteAVSDK_TRTC.framework */,
+			);
+			name = SDK;
+			path = ../SDK;
+			sourceTree = "<group>";
+		};
+		5F489558AC78881B4A54A2AA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				30CB7B0BE668C7B577DE8896 /* LoginViewController_Mock.swift */,
+				60101D2C42AA2F37D04CD587 /* ProfileManager_Mock.swift */,
+				1E422C03E29D761DF32201A4 /* LoginViewController+UI_Mock.swift */,
+				80725CC766497EA33A06527D /* AppUtils.swift */,
+				FD30403231D9FEF49E09533F /* CommonUtils.swift */,
+				D82EE140CF1AE9219B4D8BC0 /* ProfileViewController.swift */,
+				0DB1F9AF446AC55A465767F2 /* ProfileViewController+UI.swift */,
+			);
+			name = Login;
+			path = TXLiteAVDemo/Login;
+			sourceTree = SOURCE_ROOT;
+		};
+		91D47F3B20B6B13C0072AC0B /* ReplaykitUpload */ = {
+			isa = PBXGroup;
+			children = (
+				6A503178249D03B200701E6B /* TRTCInfo.plist */,
+				45CC58AB246290BB002A914E /* SimpleIPC.h */,
+				45CC58AA246290BB002A914E /* SimpleIPC.m */,
+				91D47F3C20B6B13C0072AC0B /* SampleHandler.h */,
+				91D47F3D20B6B13C0072AC0B /* SampleHandler.m */,
+				91D47F3F20B6B13C0072AC0B /* Info.plist */,
+			);
+			path = ReplaykitUpload;
+			sourceTree = "<group>";
+		};
+		DE336FBCF7A8A2B1C7E9E0C1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5BD8B4F3BB859A4568C43B7D /* Pods-TXLiteAVDemo_TRTC.debug.xcconfig */,
+				E95CAD575C1A00021285A090 /* Pods-TXLiteAVDemo_TRTC.release.xcconfig */,
+				E0D8BC526E0FAB3AC4FA5FB4 /* Pods-TXLiteAVDemo_TRTC_AppStore.debug.xcconfig */,
+				4B4B291177070EC8D226E1E2 /* Pods-TXLiteAVDemo_TRTC_AppStore.release.xcconfig */,
+				78833A06B3E3C43A9C3CD304 /* Pods-TXReplaykitUpload_TRTC.debug.xcconfig */,
+				4004FF601EC7FB44D81E5934 /* Pods-TXReplaykitUpload_TRTC.release.xcconfig */,
+				5F28DD5C7D1447D301DA8208 /* Pods-TXReplaykitUpload_TRTC_AppStore.debug.xcconfig */,
+				FC847F58E175350391991E4C /* Pods-TXReplaykitUpload_TRTC_AppStore.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		40B3F65B2446E518000C37A3 /* TXLiteAVDemo_TRTC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 40B3F6CE2446E518000C37A3 /* Build configuration list for PBXNativeTarget "TXLiteAVDemo_TRTC" */;
+			buildPhases = (
+				EC20688869C94915D95B12FA /* [CP] Check Pods Manifest.lock */,
+				405338B62463F8EA00A6B478 /* ShellScript */,
+				40B3F6602446E518000C37A3 /* Sources */,
+				40B3F6AD2446E518000C37A3 /* Frameworks */,
+				40B3F6C12446E518000C37A3 /* Resources */,
+				45F21F7E244712F6006B8B4D /* Embed Frameworks */,
+				95FB37E483C2464FB3E40700 /* [CP] Copy Pods Resources */,
+				83BEAD8FA652EE733DB35813 /* [CP] Embed Pods Frameworks */,
+				40B3F6CD2446E518000C37A3 /* ShellScript */,
+				4074E62C249F0F30006C591F /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				40B5C68B2484BBF600D3A718 /* PBXTargetDependency */,
+			);
+			name = TXLiteAVDemo_TRTC;
+			productName = TXLiteAVDemo;
+			productReference = 40B3F6D22446E518000C37A3 /* TXLiteAVDemo_TRTC.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		40F852FB1EE8FB3800EE47D7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Tencent;
+				TargetAttributes = {
+					40B3F65B2446E518000C37A3 = {
+						DevelopmentTeam = F8A3GH6Q4W;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 40F852FE1EE8FB3800EE47D7 /* Build configuration list for PBXProject "TXLiteAVDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+				Base,
+				de,
+				es,
+				ja,
+				pl,
+				"zh-Hans",
+			);
+			mainGroup = 40F852FA1EE8FB3800EE47D7;
+			productRefGroup = 40F853041EE8FB3800EE47D7 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 40B5C67D2484BBE500D3A718 /* Products */;
+					ProjectRef = 401A9B3D247FCC7600C0763B /* AudioEffectSettingKit.xcodeproj */;
+				},
+				{
+					ProductGroup = 40A49D5F24598CD200BFCB18 /* Products */;
+					ProjectRef = 40A49D5E24598CD200BFCB18 /* UGCKit.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				40B3F65B2446E518000C37A3 /* TXLiteAVDemo_TRTC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		40A49D6524598CD700BFCB18 /* UGCKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = UGCKit.framework;
+			remoteRef = 40A49D6424598CD700BFCB18 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		40A49D6724598CD700BFCB18 /* UGCKitResources.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UGCKitResources.bundle;
+			remoteRef = 40A49D6624598CD700BFCB18 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		40B5C6832484BBE500D3A718 /* AudioEffectSettingKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AudioEffectSettingKit.framework;
+			remoteRef = 40B5C6822484BBE500D3A718 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		40B5C6872484BBE500D3A718 /* AudioEffectSettingKitResources.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AudioEffectSettingKitResources.bundle;
+			remoteRef = 40B5C6862484BBE500D3A718 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		40B3F6C12446E518000C37A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40B5C6942484BE4800D3A718 /* AudioEffectSettingKitResources.bundle in Resources */,
+				4090F791246AE23B00EA72A0 /* Portal.storyboard in Resources */,
+				6A50323624A1A68E00701E6B /* UserProtocol.html in Resources */,
+				40B3F6C72446E518000C37A3 /* FilterResource.bundle in Resources */,
+				40B3F6C82446E518000C37A3 /* LaunchScreen.storyboard in Resources */,
+				4090F794246AE25A00EA72A0 /* TRTCPortalAssets.xcassets in Resources */,
+				40B3F6CA2446E518000C37A3 /* Assets.xcassets in Resources */,
+				4040CC5F2497C79400CA4FAA /* TRTCVoiceRoomAssets.xcassets in Resources */,
+				40B3F6CC2446E518000C37A3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		405338B62463F8EA00A6B478 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [ -e ../download.sh ]; then\n    bash ../download.sh TRTC\nfi\n";
+		};
+		40B3F6CD2446E518000C37A3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# compress application.\n/bin/rm -rf $CONFIGURATION_BUILD_DIR/Payload\n/bin/mkdir -p $CONFIGURATION_BUILD_DIR/Payload\n/bin/cp -R $CONFIGURATION_BUILD_DIR/${PRODUCT_NAME}.app $CONFIGURATION_BUILD_DIR/Payload\n#/bin/cp images/logo_itunes.png $CONFIGURATION_BUILD_DIR/iTunesArtwork\ncd $CONFIGURATION_BUILD_DIR\n# zip up the HelloWorld directory\n/usr/bin/zip -r -q ${PRODUCT_NAME}.ipa Payload iTunesArtwork\n";
+		};
+		83BEAD8FA652EE733DB35813 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TXLiteAVDemo_TRTC/Pods-TXLiteAVDemo_TRTC-frameworks.sh",
+				"${PODS_ROOT}/TXIMSDK_iOS/ImSDK.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImSDK.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TXLiteAVDemo_TRTC/Pods-TXLiteAVDemo_TRTC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95FB37E483C2464FB3E40700 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TXLiteAVDemo_TRTC/Pods-TXLiteAVDemo_TRTC-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/Material/com.cosmicmind.material.icons.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/Material/com.cosmicmind.material.fonts.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/com.cosmicmind.material.icons.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/com.cosmicmind.material.fonts.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TXLiteAVDemo_TRTC/Pods-TXLiteAVDemo_TRTC-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC20688869C94915D95B12FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TXLiteAVDemo_TRTC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		40B3F6602446E518000C37A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4040CC832497C79400CA4FAA /* TRTCVoiceRoomSeatCell.swift in Sources */,
+				4046B15A24B36AD700F27349 /* TXBaseDef.m in Sources */,
+				4090F792246AE23B00EA72A0 /* MainMenuCell.m in Sources */,
+				40B3F66A2446E518000C37A3 /* UIButton+Glossy.m in Sources */,
+				4090F790246AE23B00EA72A0 /* PortalViewController.m in Sources */,
+				4040CCAB2497C79400CA4FAA /* TRTCVoiceRoomListRootView.swift in Sources */,
+				4040CC672497C79400CA4FAA /* TRTCVoiceRoomVIewDataDef.swift in Sources */,
+				4040CCB32497C79400CA4FAA /* TRTCCreateVoiceRoomViewController.swift in Sources */,
+				40E1F4492468F74A00F3D350 /* NSString+UISize.m in Sources */,
+				40B3F9FF2447042C000C37A3 /* HUDHelper.m in Sources */,
+				40E1F44F2468F75300F3D350 /* NSDictionary+Common.m in Sources */,
+				40B3F9DF2446EF11000C37A3 /* TCLog.m in Sources */,
+				4040CCA72497C79400CA4FAA /* TRTCVoiceRoomListViewController.swift in Sources */,
+				4040CC972497C79400CA4FAA /* TRTCVoiceRoomTipsTableCell.swift in Sources */,
+				40B3F9E22446EF11000C37A3 /* TCUtil.m in Sources */,
+				4040CC932497C79400CA4FAA /* TRTCAudienceTableViewCell.swift in Sources */,
+				40B3F6762446E518000C37A3 /* AppDelegate.m in Sources */,
+				4046B16324B36C0A00F27349 /* TRTCLog.swift in Sources */,
+				4046B14E24B36AD700F27349 /* TRTCVoiceRoomDef.m in Sources */,
+				4040CC9B2497C79400CA4FAA /* TRTCVoiceRoomMsgInputView.swift in Sources */,
+				40B3F6812446E518000C37A3 /* UIView+Additions.m in Sources */,
+				4040CC7B2497C79400CA4FAA /* UIColor+hex.swift in Sources */,
+				4040CCAF2497C79400CA4FAA /* TRTCVoiceRoomListCell.swift in Sources */,
+				40B3F6852446E518000C37A3 /* NSString+Common.m in Sources */,
+				4046B15224B36AD700F27349 /* TXVoiceRoomService.m in Sources */,
+				4046B15624B36AD700F27349 /* TXVoiceRoomIMJsonHandle.m in Sources */,
+				4040CC8B2497C79400CA4FAA /* TRTCVoiceRoomSeatView.swift in Sources */,
+				4040CCB72497C79400CA4FAA /* TRTCCreateVoiceRoomRootView.swift in Sources */,
+				40E25FCE2480C797005EB543 /* Portal+Swift.swift in Sources */,
+				4046B15E24B36AD700F27349 /* TRTCVoiceRoom.m in Sources */,
+				4040CC632497C79400CA4FAA /* TRTCCreateVoiceRoomViewModel.swift in Sources */,
+				4046B14A24B36AD700F27349 /* VoiceRoomTRTCService.m in Sources */,
+				402A010624506F740037A219 /* main.m in Sources */,
+				4040CC872497C79400CA4FAA /* TRTCVoiceRoomViewController.swift in Sources */,
+				4040CCA32497C79400CA4FAA /* TRTCAudienceListView.swift in Sources */,
+				40B3F6902446E518000C37A3 /* UIButton+Additions.m in Sources */,
+				40B3FA022447056D000C37A3 /* UIColor+MLPFlatColors.m in Sources */,
+				4040CC6B2497C79400CA4FAA /* TRTCVoiceRoomListViewModel.swift in Sources */,
+				4040CC8F2497C79400CA4FAA /* TRTCVoiceRoomTipsView.swift in Sources */,
+				40B3F6912446E518000C37A3 /* UIView+CustomAutoLayout.m in Sources */,
+				40B3F6922446E518000C37A3 /* UIViewController+BackButtonHandler.m in Sources */,
+				4040CC4F2497C79400CA4FAA /* TRTCVoiceRoomManager.swift in Sources */,
+				40B3F6942446E518000C37A3 /* AppLogMgr.m in Sources */,
+				4040CC6F2497C79400CA4FAA /* TRTCVoiceRoomViewModel.swift in Sources */,
+				40B3F6972446E518000C37A3 /* NSObject+CommonBlock.m in Sources */,
+				4040CC7F2497C79400CA4FAA /* TRTCVoiceRoomMainMenuView.swift in Sources */,
+				4040CC772497C79400CA4FAA /* TRTCVoiceRoomEnteryControl.swift in Sources */,
+				40B3F69F2446E518000C37A3 /* NSData+Common.m in Sources */,
+				4040CC9F2497C79400CA4FAA /* TRTCVoiceRoomRootView.swift in Sources */,
+				40B3F9722446E6C6000C37A3 /* GenerateTestUserSig.m in Sources */,
+				40B3F6AA2446E518000C37A3 /* UIImage+Additions.m in Sources */,
+				DE377520D779EB30037F84C7 /* LoginViewController_Mock.swift in Sources */,
+				6F02F39DEDE545442C6BDA52 /* ProfileManager_Mock.swift in Sources */,
+				5DC3DC322CD58492B41F3455 /* LoginViewController+UI_Mock.swift in Sources */,
+				DBAAA2306954433FA6A66ED6 /* AppUtils.swift in Sources */,
+				5F1C7A4495A350081E0CF34C /* CommonUtils.swift in Sources */,
+				2BBABE1CD06BFF5EF53254E2 /* ProfileViewController.swift in Sources */,
+				EA260842F19110F1364530B7 /* ProfileViewController+UI.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		40B5C68B2484BBF600D3A718 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AudioEffectSettingKitResources;
+			targetProxy = 40B5C68A2484BBF600D3A718 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		40F853311EE8FC9B00EE47D7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40F853321EE8FC9B00EE47D7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		40F853331EE8FC9B00EE47D7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				40F853341EE8FC9B00EE47D7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		40B3F6CF2446E518000C37A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BD8B4F3BB859A4568C43B7D /* Pods-TXLiteAVDemo_TRTC.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon_TRTC;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CODE_SIGN_ENTITLEMENTS = TXLiteAVDemo_TRTCDebug.entitlements;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F8A3GH6Q4W;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TXLiteAVDemo",
+					"$(PROJECT_DIR)/../SDK",
+				);
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SDK_MAIN_VERSION=$(MAIN_VERSION)",
+					"SDK_SUB_VERSION=$(SUB_VERSION)",
+					"SDK_FIX_VERSION=$(FIX_VERSION)",
+					"SDK_BUILD_NUMBER=$(BUILD_NUMBER)",
+					DISABLE_VOD,
+					ENABLE_PLAY,
+					ENABLE_TRTC,
+					"FOR_RELEASE=$FOR_RELEASE",
+					TRTC,
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(CONFIGURATION_BUILD_DIR)/TXLiteAVSDK_TRTC.framework/Headers",
+					"$(PROJECT_DIR)/../SDK/TXLiteAVSDK_TRTC.framework/Headers",
+				);
+				INFOPLIST_FILE = "TXLiteAVDemo/App/TRTC-Appstore-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0.0;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aby.trtcdemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = TRTCTestProfile;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/TXLiteAVDemo/App/TXLiteAVDemo-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "TXLiteAVDemo-Swift.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		40B3F6D02446E518000C37A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E95CAD575C1A00021285A090 /* Pods-TXLiteAVDemo_TRTC.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon_TRTC;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_DEBUG_INFORMATION_LEVEL = "line-tables-only";
+				CODE_SIGN_ENTITLEMENTS = TXLiteAVDemo_TRTCRelease.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F8A3GH6Q4W;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TXLiteAVDemo",
+					"$(PROJECT_DIR)/../SDK",
+				);
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SDK_MAIN_VERSION=$(MAIN_VERSION)",
+					"SDK_SUB_VERSION=$(SUB_VERSION)",
+					"SDK_FIX_VERSION=$(FIX_VERSION)",
+					"SDK_BUILD_NUMBER=$(BUILD_NUMBER)",
+					DISABLE_VOD,
+					ENABLE_PLAY,
+					ENABLE_TRTC,
+					"FOR_RELEASE=$FOR_RELEASE",
+					TRTC,
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(CONFIGURATION_BUILD_DIR)/TXLiteAVSDK_TRTC.framework/Headers",
+					"$(PROJECT_DIR)/../SDK/TXLiteAVSDK_TRTC.framework/Headers",
+				);
+				INFOPLIST_FILE = "TXLiteAVDemo/App/TRTC-Appstore-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_GENERATE_MAP_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0.0;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aby.trtcdemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = Voice;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/TXLiteAVDemo/App/TXLiteAVDemo-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "TXLiteAVDemo-Swift.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		40F853181EE8FB3800EE47D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../SDK";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		40F853191EE8FB3800EE47D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Tencent Technology (Shenzhen) Co., Ltd";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../SDK";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		40B3F6CE2446E518000C37A3 /* Build configuration list for PBXNativeTarget "TXLiteAVDemo_TRTC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40B3F6CF2446E518000C37A3 /* Debug */,
+				40B3F6D02446E518000C37A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		40F852FE1EE8FB3800EE47D7 /* Build configuration list for PBXProject "TXLiteAVDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40F853181EE8FB3800EE47D7 /* Debug */,
+				40F853191EE8FB3800EE47D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 40F852FB1EE8FB3800EE47D7 /* Project object */;
+}
