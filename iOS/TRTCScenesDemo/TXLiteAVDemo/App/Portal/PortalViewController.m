@@ -13,6 +13,49 @@
 #define SdkBusiId (18070)
 #endif
 
+/**
+ Synthsize a weak or strong reference.
+ 
+ Example:
+    @weakify(self)
+    [self doSomething^{
+        @strongify(self)
+        if (!self) return;
+        ...
+    }];
+ */
+#ifndef weakify
+    #if DEBUG
+        #if __has_feature(objc_arc)
+        #define weakify(object) autoreleasepool{} __weak __typeof__(object) weak##_##object = object;
+        #else
+        #define weakify(object) autoreleasepool{} __block __typeof__(object) block##_##object = object;
+        #endif
+    #else
+        #if __has_feature(objc_arc)
+        #define weakify(object) try{} @finally{} {} __weak __typeof__(object) weak##_##object = object;
+        #else
+        #define weakify(object) try{} @finally{} {} __block __typeof__(object) block##_##object = object;
+        #endif
+    #endif
+#endif
+
+#ifndef strongify
+    #if DEBUG
+        #if __has_feature(objc_arc)
+        #define strongify(object) autoreleasepool{} __typeof__(object) object = weak##_##object;
+        #else
+        #define strongify(object) autoreleasepool{} __typeof__(object) object = block##_##object;
+        #endif
+    #else
+        #if __has_feature(objc_arc)
+        #define strongify(object) try{} @finally{} __typeof__(object) object = weak##_##object;
+        #else
+        #define strongify(object) try{} @finally{} __typeof__(object) object = block##_##object;
+        #endif
+    #endif
+#endif
+
 
 @interface PortalViewMenuLayout : UICollectionViewFlowLayout
 
@@ -83,6 +126,23 @@ UIPickerViewDataSource, UIPickerViewDelegate> {
     [self.titleLabel addGestureRecognizer:pressGesture];
     self.titleLabel.userInteractionEnabled = YES;
     [self setUpLogViews];
+    // 登录
+    NSString *userID = [[ProfileManager shared] curUserID];
+    NSString *userSig = [[ProfileManager shared] curUserSig];
+    [self showActivity];
+    @weakify(self)
+    [self.voiceRoom login:SDKAPPID userId:userID userSig:userSig callback:^(int32_t code, NSString * _Nonnull message) {
+        NSLog(@"login voiceroom success.");
+        @strongify(self)
+        LoginResultModel *curUser = [[ProfileManager shared] curUserModel];
+        NSString *name = [curUser.name isEqualToString:@""] ? curUser.userId : curUser.name;
+        NSString *avatar = [curUser.avatar isEqualToString:@""] ? @"https://imgcache.qq.com/qcloud/public/static//avatar1_100.20191230.png" : curUser.avatar;
+        [self.voiceRoom setSelfProfile:name avatarURL:avatar callback:^(int32_t code, NSString * _Nonnull message) {
+            NSLog(@"voiceroom: set self profile success.");
+            @strongify(self)
+            [self hideActivity];
+        }];
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -103,15 +163,6 @@ UIPickerViewDataSource, UIPickerViewDelegate> {
 
 - (void)gotoVoiceRoomView {
     NSString *userID = [[ProfileManager shared] curUserID];
-    NSString *userSig = [[ProfileManager shared] curUserSig];
-    [self.voiceRoom login:SDKAPPID userId:userID userSig:userSig callback:^(int32_t code, NSString * _Nonnull message) {
-        NSLog(@"login voiceroom success.");
-    }];
-    LoginResultModel *curUser = [[ProfileManager shared] curUserModel];
-    [self.voiceRoom setSelfProfile:curUser.name avatarURL:curUser.avatar callback:^(int32_t code, NSString * _Nonnull message) {
-        NSLog(@"voiceroom: set self profile success.");
-
-    }];
     TRTCVoiceRoomEnteryControl* container = [[TRTCVoiceRoomEnteryControl alloc] initWithSdkAppId:SDKAPPID userId:userID];
     UIViewController* vc = [container makeEntranceViewController];
     [self.navigationController pushViewController:vc animated:YES];

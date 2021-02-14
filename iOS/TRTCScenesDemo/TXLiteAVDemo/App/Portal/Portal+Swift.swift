@@ -17,4 +17,12 @@ extension PortalViewController {
     @objc func makeToast(message: String) {
         view.makeToast(message)
     }
+    
+    @objc func showActivity() {
+        view.makeToastActivity(.center)
+    }
+    
+    @objc func hideActivity() {
+        view.hideToastActivity()
+    }
 }

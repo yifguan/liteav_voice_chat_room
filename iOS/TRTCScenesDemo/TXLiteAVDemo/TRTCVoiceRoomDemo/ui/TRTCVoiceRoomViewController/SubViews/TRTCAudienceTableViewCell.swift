@@ -83,6 +83,7 @@ class TRTCAudienceTableViewCell: UITableViewCell {
         super.prepareForReuse()
         model = nil
         iconView.image = UIImage.init(named: "voiceroom_placeholder_avatar")
+        nameLabel.text = ""
     }
     
     func activateConstraints() {

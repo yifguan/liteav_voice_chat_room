@@ -65,7 +65,6 @@ class TRTCVoiceRoomRootView: UIView {
             (UIImage.init(named: "voiceroom_message_normal")!, UIImage.init(named: "voiceroom_message_select")!),
             (UIImage.init(named: "voiceroom_mic_close")!, UIImage.init(named: "voiceroom_mic_open")!),
             (UIImage.init(named: "voiceroom_voice_close")!, UIImage.init(named: "voiceroom_voice_open")!),
-            (UIImage.init(named: "voiceroom_audioEffect_close")!, UIImage.init(named: "voiceroom_audioEffect_open")!)
         ]
         let view = TRTCVoiceRoomMainMenuView.init(icons: icons)
         return view
@@ -153,9 +152,6 @@ extension TRTCVoiceRoomRootView: TRTCVoiceRoomMainMenuDelegate {
             // 外放
             viewModel.spechAction(isMute: item.isSelected)
             item.isSelected = !item.isSelected
-        case 3:
-            // 音效
-            viewModel.openAudioEffectMenu()
         default:
             break
         }

@@ -125,18 +125,18 @@ class TRTCVoiceRoomViewModel: NSObject {
     public func muteAction(isMute: Bool) -> Bool {
         guard checkButtonPermission() else { return false }
         guard !isOwnerMute else {
-            viewResponder?.showToast(message: "Has been muted by the owner.")
+            viewResponder?.showToast(message: "Has been muted by the owner")
             return false
         }
         isSelfMute = isMute
         if isMute {
-            voiceRoom.stopMicrophone()
+            voiceRoom.muteLocalAudio(mute: true)
             viewResponder?.stopPlayBGM()
-            viewResponder?.showToast(message: "The microphone is turned off.")
+            viewResponder?.showToast(message: "The microphone is turned off")
         } else {
-            voiceRoom.startMicrophone()
+            voiceRoom.muteLocalAudio(mute: false)
             viewResponder?.recoveryVoiceSetting()
-            viewResponder?.showToast(message: "The microphone is turned on.")
+            viewResponder?.showToast(message: "The microphone is turned on")
         }
         return true
     }
@@ -144,15 +144,15 @@ class TRTCVoiceRoomViewModel: NSObject {
     public func spechAction(isMute: Bool) {
         voiceRoom.muteAllRemoteAudio(isMute: isMute)
         if isMute {
-            viewResponder?.showToast(message: "Muted.")
+            viewResponder?.showToast(message: "Muted")
         } else {
-            viewResponder?.showToast(message: "Unmuted.")
+            viewResponder?.showToast(message: "Unmuted")
         }
     }
     
     public func clickSeat(model: SeatInfoModel) {
         guard isSeatInitSuccess else {
-            viewResponder?.showToast(message: "The list has not been initialized yet.")
+            viewResponder?.showToast(message: "The list has not been initialized yet")
             return
         }
         if roomType == .audience || dependencyContainer.userId != roomInfo.ownerId {
@@ -166,7 +166,7 @@ class TRTCVoiceRoomViewModel: NSObject {
         voiceRoom.enterRoom(roomID: roomInfo.roomID) { [weak self] (code, message) in
             guard let `self` = self else { return }
             if code == 0 {
-                self.viewResponder?.showToast(message: "Succeed to enter the room.")
+                self.viewResponder?.showToast(message: "Entered the rom.")
                 self.voiceRoom.setAuidoQuality(quality: toneQuality)
             } else {
                 self.viewResponder?.showToast(message: "Failed to enter the room.")
@@ -460,9 +460,9 @@ extension TRTCVoiceRoomViewModel {
             let inviteId = voiceRoom.sendInvitation(cmd: cmd, userId: targetUserId, content: "\(seatIndex)") { [weak self] (code, message) in
                 guard let `self` = self else { return }
                 if code == 0 {
-                    self.viewResponder?.showToast(message: "The application has been sent, waiting for the host to process.")
+                    self.viewResponder?.showToast(message: "Sent successfully")
                 } else {
-                    self.viewResponder?.showToast(message: "the application is failed to sent：\(message)")
+                    self.viewResponder?.showToast(message: "Sent Failed：\(message)")
                 }
             }
             mInvitationSeatDic[inviteId] = seatIndex
@@ -729,7 +729,7 @@ extension TRTCVoiceRoomViewModel: TRTCVoiceRoomDelegate {
     }
     
     func onAudienceExit(userInfo: VoiceRoomUserInfo) {
-        showNotifyMsg(messsage: "\(userInfo.userName) leave room.")
+        showNotifyMsg(messsage: "\(userInfo.userName) left the room.")
         // 主播端(房主)
         if roomType == .anchor && roomInfo.ownerId == dependencyContainer.userId {
             memberAudienceList.removeAll { (model) -> Bool in

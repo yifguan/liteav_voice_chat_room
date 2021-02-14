@@ -3,26 +3,26 @@
 //  TRTCVoiceRoomDemo
 //
 //  Created by abyyxwang on 2020/6/3.
-//  Copyright © 2020 tencent. All rights reserved.
+//  Copyright © 2020 Tencent. All rights reserved.
 //
 
 import UIKit
 
-/// ViewModel可视为MVC架构中的Controller层
-/// 负责语音聊天室控制器和ViewModel依赖注入，以及公用参数的传递
-/// ViewModel、ViewController
-/// 注意：该类负责生成所有UI层的ViewController、ViewModel。慎重持有ui层的成员变量，否则很容易发生循环引用。持有成员变量时要慎重！！！！
+/// ViewModel can be regarded as the Controller layer in the MVC architecture
+/// It is responsible for the dependency injection of the voice chat room controller and ViewModel and the transfer of common parameters
+/// ViewModel, ViewController
+/// Note: this class is responsible for generating ViewController and ViewModel of all UI layers. Carefully hold the member variables of the UI layers; otherwise, circular references are prone to occur. Please be cautious when holding member variables!
 class TRTCVoiceRoomEnteryControl: NSObject {
-    // 只读参数，初始化时在外部调用。
-    // SDKAPPID和USERID也可以为全局参数，根据自己的需求灵活调整
-    // 注入改参数的目的为，解耦VoiceRoomUI层与Login模块的耦合
+    // Read-only parameter, which is called externally during initialization.
+    // `SDKAPPID` and `USERID` can also be global parameters, which can be flexibly adjusted according to your needs
+    // The purpose of injecting this parameter is to decouple the VoiceRoomUI layer and the Login module
     private(set) var mSDKAppID: Int32 = 0
     private(set) var userId: String = ""
     
-    /// 初始化方法
+    /// Initialization method
     /// - Parameters:
-    ///   - sdkAppId: 注入当前SDKAPPID
-    ///   - userId: 注入userID
+    ///   - sdkAppId: inject the current `SDKAPPID`
+    ///   - userId: inject the `userID`
     @objc convenience init(sdkAppId:Int32, userId: String) {
         self.init()
         self.mSDKAppID = sdkAppId
@@ -33,15 +33,15 @@ class TRTCVoiceRoomEnteryControl: NSObject {
         TRTCLog.out("deinit \(type(of: self))")
     }
     /*
-     TRTCVoice为可销毁单例。
-     在Demo中，可以通过shardInstance（OC）shared（swift）获取或生成单例对象
-     销毁单例对象后，需要再次调用sharedInstance接口重新生成实例。
-     该方法在VoiceRoomListRoomViewModel、CreateVoiceRoomViewModel、VoiceRoomViewModel中调用。
-     由于是可销毁单例，将对象生成防止在这里的目的为统一管理单例生成路径，方便维护
+     `TRTCVoice` is a terminatable singleton.
+     In the demo, a singleton object can be obtained or generated through `shardInstance` (OC) or `shared` (Swift)
+     After terminating the singleton object, you need to call the `sharedInstance` API again to generate the instance again.
+     This method is called in `VoiceRoomListRoomViewModel`, `CreateVoiceRoomViewModel`, and `VoiceRoomViewModel`
+     Since it is a terminatable singleton, the purpose of generating and placing the object here is to manage the singleton generation path in a unified way and facilitate maintenance
      */
     private var voiceRoom: TRTCVoiceRoom?
-    /// 获取VoiceRoom
-    /// - Returns: 返回VoiceRoom单例
+    /// Get `VoiceRoom`
+    /// - Returns: `VoiceRoom` singleton
     func getVoiceRoom() -> TRTCVoiceRoom {
         if let room = voiceRoom {
             return room
@@ -50,66 +50,66 @@ class TRTCVoiceRoomEnteryControl: NSObject {
         return voiceRoom!
     }
     /*
-     在无需使用VoicRoom的场景，可以将单例对象销毁。
-     例如：退出登录时。
-     在本Demo中没有调用到改销毁方法。
+     When `VoiceRoom` is no longer needed, the singleton object can be terminated.
+     For example, when you log off.
+     This termination method is not called in this demo.
     */
-    /// 销毁voiceRoom单例
+    /// Terminate `voiceRoom` singleton
     func clearVoiceRoom() {
         TRTCVoiceRoom.destroyShared()
         voiceRoom = nil
     }
     
     
-    /// 语聊房入口控制器
-    /// - Returns: 返回语聊房的主入口
+    /// Controller of the voice chat room entry
+    /// - Returns: main entry to the voice chat room
     @objc func makeEntranceViewController() -> UIViewController {
        return makeVoiceRoomListViewController()
     }
     
     
-    /// 创建语聊房页面
-    /// - Returns: 创建语聊房VC
+    /// Create a voice chat room page
+    /// - Returns: VC of the created voice chat room
     func makeCreateVoiceRoomViewController() -> UIViewController {
          return TRTCCreateVoiceRoomViewController.init(dependencyContainer: self)
     }
     
     
-    /// 房间列表页面
-    /// - Returns: 语聊房列表VC
+    /// Room list page
+    /// - Returns: VC of the voice chat room list
     func makeVoiceRoomListViewController() -> UIViewController {
         return TRTCVoiceRoomListViewController.init(dependencyContainer: self)
     }
     
-    /// 语聊房
+    /// Voice chat room
     /// - Parameters:
-    ///   - roomInfo: 要进入或者创建的房间参数
-    ///   - role: 角色：观众 主播
-    /// - Returns: 返回语聊房控制器
-    func makeVoiceRoomViewController(roomInfo: VoiceRoomInfo, role: VoiceRoomViewType, toneQuality:VoiceRoomToneQuality = .defaultQuality) -> UIViewController {
+    ///   - roomInfo: parameter of the room to be created or entered
+    ///   - role: role (viewer or anchor)
+    /// - Returns: voice chat room controller
+    func makeVoiceRoomViewController(roomInfo: VoiceRoomInfo, role: VoiceRoomViewType, toneQuality:VoiceRoomToneQuality = .music) -> UIViewController {
         return TRTCVoiceRoomViewController.init(viewModelFactory: self, roomInfo: roomInfo, role: role, toneQuality: toneQuality)
     }
 }
 
 extension TRTCVoiceRoomEnteryControl: TRTCVoiceRoomViewModelFactory {
     
-    /// 创建语聊房视图逻辑层（MVC中的C，MVVM中的ViewModel）
-    /// - Returns: 创建语聊房页面的ViewModel
+    /// Create the logic layer of the voice chat room view (C in MVC or ViewModel in MVVM)
+    /// - Returns: ViewModel of the created voice chat room page
     func makeCreateVoiceRoomViewModel() -> TRTCCreateVoiceRoomViewModel {
         return TRTCCreateVoiceRoomViewModel.init(container: self)
     }
     
-    /// 语聊房视图逻辑层（MVC中的C，MVVM中的ViewModel）
+    /// Logic layer of the voice chat room view (C in MVC or ViewModel in MVVM)
     /// - Parameters:
-    ///   - roomInfo: 语聊房信息
-    ///   - roomType: 角色
-    /// - Returns: 语聊房页面的ViewModel
+    ///   - roomInfo: voice chat room information
+    ///   - roomType: role
+    /// - Returns: ViewModel of the voice chat room page
     func makeVoiceRoomViewModel(roomInfo: VoiceRoomInfo, roomType: VoiceRoomViewType) -> TRTCVoiceRoomViewModel {
         return TRTCVoiceRoomViewModel.init(container: self, roomInfo: roomInfo, roomType: roomType)
     }
     
-    /// 语聊房列表视图逻辑层（MVC中的C，MVVM中的ViewModel）
-    /// - Returns: 语聊房列表的Viewmodel
+    /// Logic layer of the voice chat room list view (C in MVC or ViewModel in MVVM)
+    /// - Returns: ViewModel of the voice chat room list
     func makeVoiceRoomListViewModel() -> TRTCVoiceRoomListViewModel {
         return TRTCVoiceRoomListViewModel.init(container: self)
     }

@@ -25,6 +25,11 @@
     return self;
 }
 
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"VoiceRoomSeatInfo: status: %ld, mute: %d, userId: %@", (long)self.status, self.mute, self.userId];
+}
+
 @end
 
 @implementation VoiceRoomUserInfo

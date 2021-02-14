@@ -44,7 +44,6 @@ extension LoginViewController {
         
         //UserID
         let (phoneNumber, numberSignal) = getTextObservable(placeholder: "Please enter User ID")
-        phoneNumber.keyboardType = .numberPad
         phoneNumber.delegate = self
         view.addSubview(phoneNumber)
         phoneNumber.snp.makeConstraints { (make) in

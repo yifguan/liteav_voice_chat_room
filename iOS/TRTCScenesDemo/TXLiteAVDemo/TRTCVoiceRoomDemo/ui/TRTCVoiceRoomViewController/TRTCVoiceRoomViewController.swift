@@ -49,12 +49,14 @@ public class TRTCVoiceRoomViewController: UIViewController {
     public override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         viewModel?.refreshView()
+        UIApplication.shared.isIdleTimerDisabled = true
     }
     
     public override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         guard let rootView = self.view as? TRTCVoiceRoomRootView else { return }
         rootView.audioEffectView.resetAudioSetting()
+        UIApplication.shared.isIdleTimerDisabled = false
     }
     
     public override func loadView() {
