@@ -29,15 +29,12 @@ public class VoiceRoomAnchorActivity extends VoiceRoomBaseActivity implements Se
 
     private List<MemberEntity>          mMemberEntityList;
     private Map<String, MemberEntity>   mMemberEntityMap;
-    // 用户申请上麦的map
+    // map for audience apply
     private Map<String, String>         mTakeSeatInvitationMap;
-    // 邀请人上麦的map
+    // map for invite audience
     private Map<String, SeatInvitation> mPickSeatInvitationMap;
     private boolean                     mIsEnterRoom;
 
-    /**
-     * 创建房间
-     */
     public static void createRoom(Context context, String roomName, String userId,
                                   String userName, String userAvatar, String coverUrl, int audioQuality, boolean needRequest) {
         Intent intent = new Intent(context, VoiceRoomAnchorActivity.class);
@@ -123,13 +120,11 @@ public class VoiceRoomAnchorActivity extends VoiceRoomBaseActivity implements Se
         //刷新界面的按钮
         mBtnAudio.setActivated(true);
         mBtnMic.setActivated(true);
-        mBtnEffect.setActivated(true);
         mBtnMsg.setActivated(true);
 
         mBtnMsg.setSelected(true);
         mBtnAudio.setSelected(true);
         mBtnMic.setSelected(true);
-        mBtnEffect.setSelected(true);
 
         mRoomId = getRoomId();
         mCurrentRole = TRTCCloudDef.TRTCRoleAnchor;
@@ -385,15 +380,15 @@ public class VoiceRoomAnchorActivity extends VoiceRoomBaseActivity implements Se
     }
 
     /**
-     * mViewSelectMember 的回调函数
-     * 主播选择了观众进行邀请操作
+     * mViewSelectMember callback
+     * host invite audience
      *
      * @param seatIndex
      * @param memberEntity
      */
     @Override
     public void onSelected(int seatIndex, final MemberEntity memberEntity) {
-        // 座位号 seat index 上 选择了某个用户进行邀请
+        // select seat, invite the
         VoiceRoomSeatEntity seatEntity = mVoiceRoomSeatEntityList.get(seatIndex);
         if (seatEntity.isUsed) {
             ToastUtils.showLong(R.string.trtcvoiceroom_seat_used);

@@ -1,139 +1,139 @@
 package com.tencent.liteav.trtcvoiceroom.model;
 
 import com.tencent.liteav.trtcvoiceroom.model.TRTCVoiceRoomDef.SeatInfo;
+import com.tencent.trtc.TRTCCloudDef;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public interface TRTCVoiceRoomDelegate {
     /**
-     * 组件出错信息，请务必监听并处理
+     * Callback for error
+     * @param code Error code
+     * @param message Error message
      */
     void onError(int code, String message);
 
     /**
-     * 组件告警信息
+     * Callback for warning
+     * @param code Warning code
+     * @param message Warning message
      */
     void onWarning(int code, String message);
 
     /**
-     * 组件log信息
+     * Debugging log
+     * @param message Message
      */
     void onDebugLog(String message);
 
     /**
-     * 房间被销毁，当主播调用destroyRoom后，观众会收到该回调
+     * Callback for room termination
+     * @param roomId Termination roomid
      */
     void onRoomDestroy(String roomId);
 
     /**
-     * 房间信息改变的通知
+     * Callback for room information change
+     * @param roomInfo Room information
      */
     void onRoomInfoChange(TRTCVoiceRoomDef.RoomInfo roomInfo);
 
     /**
-     * 全量的麦位列表变化,包含了整个麦位表
-     * @param seatInfoList 全量的麦位列表
+     * Callback for room seat change
+     * @param seatInfoList Seat list information
      */
     void onSeatListChange(List<SeatInfo> seatInfoList);
 
     /**
-     * 有成员上麦(主动上麦/主播抱人上麦)
-     * @param index 上麦的麦位
-     * @param user  用户详细信息
+     * Callback for anchor mic-on
+     * @param index Seat number
+     * @param user User information
      */
     void onAnchorEnterSeat(int index, TRTCVoiceRoomDef.UserInfo user);
 
     /**
-     * 有成员下麦(主动下麦/主播踢人下麦)
-     * @param index 下麦的麦位
-     * @param user  用户详细信息
+     * Callback for anchor mic-off
+     * @param index Seat number
+     * @param user User information
      */
     void onAnchorLeaveSeat(int index, TRTCVoiceRoomDef.UserInfo user);
 
     /**
-     * 主播禁麦
-     * @param index  操作的麦位
-     * @param isMute 是否静音
+     * Callback for seat mute status
+     * @param index Seat number
+     * @param isMute Mute status
      */
     void onSeatMute(int index, boolean isMute);
 
     /**
-     * 主播封麦
-     * @param index  操作的麦位
-     * @param isClose 是否封禁麦位
+     * Callback for seat closure
+     * @param index Seat number
+     * @param isClose Whether it is closed
      */
     void onSeatClose(int index, boolean isClose);
 
     /**
-     * 观众进入房间
-     *
-     * @param userInfo 观众的详细信息
+     * Callback for viewer's room entry
+     * @param userInfo Viewer information
      */
     void onAudienceEnter(TRTCVoiceRoomDef.UserInfo userInfo);
 
     /**
-     * 观众离开房间
-     *
-     * @param userInfo 观众的详细信息
+     * Callback for viewer's room exit
+     * @param userInfo Viewer information
      */
     void onAudienceExit(TRTCVoiceRoomDef.UserInfo userInfo);
 
     /**
-     * 上麦成员的音量变化
-     *
-     * @param userId 用户 ID
-     * @param volume 音量大小 0-100
+     * Callback for user volume change
+     * @param userVolumes user voice volume list
+     * @param totalVolume total volume
      */
-    void onUserVolumeUpdate(String userId, int volume);
+    void onUserVolumeUpdate(ArrayList<TRTCCloudDef.TRTCVolumeInfo> userVolumes, int totalVolume);
 
     /**
-     * 收到文本消息。
-     *
-     * @param message 文本消息。
-     * @param userInfo 发送者用户信息。
+     * Callback for text message receipt
+     * @param message Message content
+     * @param userInfo Sender information
      */
     void onRecvRoomTextMsg(String message, TRTCVoiceRoomDef.UserInfo userInfo);
 
     /**
-     * 收到自定义消息。
-     *
-     * @param cmd 命令字，由开发者自定义，主要用于区分不同消息类型。
-     * @param message 文本消息。
-     * @param userInfo 发送者用户信息。
+     * Callback for custom message (command message) receipt
+     * @param cmd Command
+     * @param message Message content
+     * @param userInfo Sender information
      */
     void onRecvRoomCustomMsg(String cmd, String message, TRTCVoiceRoomDef.UserInfo userInfo);
 
     /**
-     * 收到新的邀请请求
-     *
-     * @param id  邀请id
-     * @param inviter 邀请人userId
-     * @param cmd 业务指定的命令字
-     * @param content 业务指定的内容
+     * Callback for invitation message receipt
+     * @param inviteID invite ID
+     * @param inviter Inviter ID
+     * @param cmd Command
+     * @param content Content
      */
-    void onReceiveNewInvitation(String id, String inviter, String cmd, String content);
+    void onReceiveNewInvitation(String inviteID, String inviter, String cmd, String content);
 
     /**
-     * 被邀请者接受邀请
-     *
-     * @param id  邀请id
-     * @param invitee 被邀请人userId
+     * Callback for invitation acceptance
+     * @param inviteID invite ID
+     * @param invitee invitee ID
      */
-    void onInviteeAccepted(String id, String invitee);
+    void onInviteeAccepted(String inviteID, String invitee);
 
     /**
-     * 被邀请者拒绝邀请
-     *
-     * @param id  邀请id
-     * @param invitee 被邀请人userId
+     * Callback for invitation decline
+     * @param inviteID invite ID
+     * @param invitee invitee ID
      */
-    void onInviteeRejected(String id, String invitee);
+    void onInviteeRejected(String inviteID, String invitee);
 
     /**
-     * 邀请人取消邀请
-     *
-     * @param id  邀请id
-     * @param inviter 邀请人userId
+     * Callback for invitation cancellation
+     * @param inviteID invite ID
+     * @param inviter Inviter ID
      */
-    void onInvitationCancelled(String id, String inviter);
+    void onInvitationCancelled(String inviteID, String inviter);
 }

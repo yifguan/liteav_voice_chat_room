@@ -96,6 +96,7 @@ public class VoiceRoomSeatAdapter extends
                 mImgHead.setImageResource(R.drawable.trtcvoiceroom_ic_head);
                 mTvName.setText(mEmptyText);
                 mTvName.setTextColor(context.getResources().getColor(R.color.trtcvoiceroom_text_color_disable));
+                mImgHead.setBorderColor(context.getResources().getColor(R.color.trtcvoiceroom_transparent));
             } else {
                 if (!TextUtils.isEmpty(model.userAvatar)) {
                     Picasso.get().load(model.userAvatar).into(mImgHead);
@@ -106,6 +107,12 @@ public class VoiceRoomSeatAdapter extends
                     mTvName.setText(model.userName);
                 } else {
                     mTvName.setText("Loading");
+                }
+                if (model.isTalk) {
+                    mImgHead.setBorderColor(context.getResources().getColor(R.color.trtcvoiceroom_text_color_second));
+                    mImgHead.setBorderWidth(5);
+                } else {
+                    mImgHead.setBorderColor(context.getResources().getColor(R.color.trtcvoiceroom_transparent));
                 }
             }
             if (model.isMute) {

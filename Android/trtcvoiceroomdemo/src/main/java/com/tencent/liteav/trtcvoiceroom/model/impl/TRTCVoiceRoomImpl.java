@@ -1371,14 +1371,12 @@ public class TRTCVoiceRoomImpl extends TRTCVoiceRoom implements ITXRoomServiceDe
     }
 
     @Override
-    public void onUserVoiceVolume(final ArrayList<TRTCCloudDef.TRTCVolumeInfo> userVolumes, int totalVolume) {
+    public void onUserVoiceVolume(final ArrayList<TRTCCloudDef.TRTCVolumeInfo> userVolumes, final int totalVolume) {
         runOnDelegateThread(new Runnable() {
             @Override
             public void run() {
                 if (mDelegate != null && userVolumes != null) {
-                    for (TRTCCloudDef.TRTCVolumeInfo info : userVolumes) {
-                        mDelegate.onUserVolumeUpdate(info.userId, info.volume);
-                    }
+                    mDelegate.onUserVolumeUpdate(userVolumes, totalVolume);
                 }
             }
         });

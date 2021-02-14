@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 观众界面
+ * audience ui
  *
  * @author guanyifeng
  */
@@ -61,11 +61,8 @@ public class VoiceRoomAudienceActivity extends VoiceRoomBaseActivity {
     private void refreshView() {
         if (mCurrentRole == TRTCCloudDef.TRTCRoleAnchor) {
             mBtnMic.setActivated(true);
-            mBtnEffect.setActivated(true);
             mBtnMic.setSelected(true);
-            mBtnEffect.setSelected(true);
         } else {
-            mBtnEffect.setActivated(false);
             mBtnMic.setActivated(false);
         }
     }
@@ -306,9 +303,6 @@ public class VoiceRoomAudienceActivity extends VoiceRoomBaseActivity {
         if (user.userId.equals(mSelfUserId)) {
             mCurrentRole = TRTCCloudDef.TRTCRoleAudience;
             mSelfSeatIndex = -1;
-            if (mAnchorAudioPanel != null) {
-                mAnchorAudioPanel.reset();
-            }
             refreshView();
         }
     }

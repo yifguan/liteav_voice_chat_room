@@ -8,11 +8,11 @@ public class TRTCVoiceRoomDef {
         public static final transient int STATUS_USED   = 1;
         public static final transient int STATUS_CLOSE  = 2;
 
-        /// 【字段含义】座位状态 0(unused)/1(used)/2(close)
+        /// seat status 0(unused)/1(used)/2(close)
         public int     status;
-        /// 【字段含义】座位是否禁言
+        /// whether the seat is mute
         public boolean mute;
-        /// 【字段含义】座位状态为1，存储userInfo
+        /// store userID when the status is used
         public String  userId;
 
         @Override

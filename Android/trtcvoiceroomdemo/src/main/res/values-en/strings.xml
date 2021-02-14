@@ -9,8 +9,8 @@
     <string name="trtcvoiceroom_seat_locked">Blocked</string>
     <string name="trtcvoiceroom_invite_into_seat">Invite</string>
     <string name="trtcvoiceroom_invite_hint">Invite</string>
-    <string name="trtcvoiceroom_send_success">Send successfully</string>
-    <string name="trtcvoiceroom_send_failed">Failed to send</string>
+    <string name="trtcvoiceroom_send_success">Sent successfully</string>
+    <string name="trtcvoiceroom_send_failed">Failed to sent</string>
     <string name="trtcvoiceroom_enable_mic">The microphone is turned on</string>
     <string name="trtcvoiceroom_disable_mic">The microphone is turned off</string>
     <string name="trtcvoiceroom_unmuted">Unmuted</string>
@@ -20,8 +20,8 @@
     <string name="trtcvoiceroom_me">me</string>
     <string name="trtcvoiceroom_fetching_host_info">Fethcing host info</string>
     <string name="trtcvoiceroom_host_offline">Host is offline</string>
-    <string name="trtcvoiceroom_anchor_enter_seat">%1s enter No.%2d seat</string>
-    <string name="trtcvoiceroom_anchor_leave_seat">%1s leave No.%2d seat</string>
+    <string name="trtcvoiceroom_anchor_enter_seat">%1s took No.%2d seat</string>
+    <string name="trtcvoiceroom_anchor_leave_seat">%1s left No.%2d seat</string>
     <string name="trtcvoiceroom_mute_seat">No.%d seat is muted</string>
     <string name="trtcvoiceroom_unmute_seat">No.%d seat is unmuted</string>
     <string name="trtcvoiceroom_anchor_close_seat">Host block No.%d seat</string>
@@ -47,8 +47,8 @@
     <string name="trtcvoiceroom_leave_success">leave seat success</string>
     <string name="trtcvoiceroom_request_seat_hint">apply</string>
     <string name="trtcvoiceroom_leave_seat_hint">Leave seat</string>
-    <string name="trtcvoiceroom_enter_room_failed">Enter room success[%1d]:%2s</string>
-    <string name="trtcvoiceroom_enter_room_success">Enter room failed</string>
+    <string name="trtcvoiceroom_enter_room_failed">Enter room failed[%1d]:%2s</string>
+    <string name="trtcvoiceroom_enter_room_success">Enter room success</string>
 
     <string name="trtcvoiceroom_title">voice chat room</string>
     <string name="trtcvoiceroom_create_voiceroom">Create a chat room</string>
@@ -61,9 +61,9 @@
     <string name="trtcvoiceroom_quality_standard">Standard</string>
     <string name="trtcvoiceroom_quality_music">Music</string>
     <string name="trtcvoiceroom_create_button">Create a chat room</string>
-    <string name="trtcvoiceroom_enter_room_hint">%s enter room</string>
+    <string name="trtcvoiceroom_enter_room_hint">%s entered the room</string>
     <string name="trtcvoiceroom_exit">Exit?</string>
     <string name="trtcvoiceroom_choose_hint">Choose</string>
     <string name="trtcvoiceroom_cancel">Cancel</string>
-    <string name="trtcvoiceroom_anchor_exit_room">%s exit room</string>
+    <string name="trtcvoiceroom_anchor_exit_room">%s left the room</string>
 </resources>

@@ -7,4 +7,5 @@ public class VoiceRoomSeatEntity {
     public boolean isUsed;
     public boolean isClose;
     public boolean isMute;
+    public boolean isTalk;
 }

@@ -19,7 +19,6 @@ import android.widget.Toast;
 
 import com.blankj.utilcode.util.ToastUtils;
 import com.squareup.picasso.Picasso;
-import com.tencent.liteav.audiosettingkit.AudioEffectPanel;
 import com.tencent.liteav.trtcvoiceroom.R;
 import com.tencent.liteav.trtcvoiceroom.model.TRTCVoiceRoom;
 import com.tencent.liteav.trtcvoiceroom.model.TRTCVoiceRoomCallback;
@@ -61,9 +60,6 @@ public class VoiceRoomBaseActivity extends AppCompatActivity implements VoiceRoo
     protected static final String VOICEROOM_USER_AVATAR   = "user_avatar";
     protected static final String VOICEROOM_ROOM_COVER    = "room_cover";
 
-    /**
-     *
-     */
     protected String        mSelfUserId;     //进房用户ID
     protected int           mCurrentRole;    //用户当前角色
     protected Set<String>   mSeatUserSet; //在座位上的主播集合
@@ -82,8 +78,6 @@ public class VoiceRoomBaseActivity extends AppCompatActivity implements VoiceRoo
     protected AppCompatImageButton      mBtnMsg;
     protected AppCompatImageButton      mBtnMic;
     protected AppCompatImageButton      mBtnAudio;
-    protected AppCompatImageButton      mBtnEffect;
-    protected AudioEffectPanel          mAnchorAudioPanel;
     protected SelectMemberView          mViewSelectMember;
     protected InputTextMsgDialog        mInputTextMsgDialog;
     protected int                       mRoomId;
@@ -114,10 +108,6 @@ public class VoiceRoomBaseActivity extends AppCompatActivity implements VoiceRoo
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (mAnchorAudioPanel != null) {
-            mAnchorAudioPanel.unInit();
-            mAnchorAudioPanel = null;
-        }
     }
 
     protected void initListener() {
@@ -132,7 +122,6 @@ public class VoiceRoomBaseActivity extends AppCompatActivity implements VoiceRoo
                         ToastUtils.showLong(R.string.trtcvoiceroom_enable_mic);
                     } else {
                         mTRTCVoiceRoom.stopMicrophone();
-                        mAnchorAudioPanel.stopPlay();
                         ToastUtils.showLong(R.string.trtcvoiceroom_disable_mic);
                     }
                 }
@@ -148,20 +137,6 @@ public class VoiceRoomBaseActivity extends AppCompatActivity implements VoiceRoo
                     ToastUtils.showLong(R.string.trtcvoiceroom_unmuted);
                 } else {
                     ToastUtils.showLong(R.string.trtcvoiceroom_muted);
-                }
-            }
-        });
-        mBtnEffect.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (checkButtonPermission()) {
-                    if (mAnchorAudioPanel.isShown()) {
-                        mAnchorAudioPanel.setVisibility(View.GONE);
-                        mAnchorAudioPanel.hideAudioPanel();
-                    } else {
-                        mAnchorAudioPanel.setVisibility(View.VISIBLE);
-                        mAnchorAudioPanel.showAudioPanel();
-                    }
                 }
             }
         });
@@ -199,8 +174,6 @@ public class VoiceRoomBaseActivity extends AppCompatActivity implements VoiceRoo
         //        mSeatCount = intent.getIntExtra(VOICEROOM_SEAT_COUNT);
         mTRTCVoiceRoom = TRTCVoiceRoom.sharedInstance(this);
         mTRTCVoiceRoom.setDelegate(this);
-        mAnchorAudioPanel.setAudioEffectManager(mTRTCVoiceRoom.getAudioEffectManager());
-
     }
 
     protected void initView() {
@@ -215,18 +188,8 @@ public class VoiceRoomBaseActivity extends AppCompatActivity implements VoiceRoo
         mBtnMsg = (AppCompatImageButton) findViewById(R.id.btn_msg);
         mBtnMic = (AppCompatImageButton) findViewById(R.id.btn_mic);
         mBtnAudio = (AppCompatImageButton) findViewById(R.id.btn_audio);
-        mBtnEffect = (AppCompatImageButton) findViewById(R.id.btn_effect);
-        mAnchorAudioPanel = (AudioEffectPanel) findViewById(R.id.anchor_audio_panel);
-        mAnchorAudioPanel.setBackground(getResources().getDrawable(R.drawable.trtcvoiceroom_audio_effect_setting_bg_gradient));
         mViewSelectMember = new SelectMemberView(this);
         mConfirmDialogFragment = new ConfirmDialogFragment();
-        mAnchorAudioPanel.setOnAudioEffectPanelHideListener(new AudioEffectPanel.OnAudioEffectPanelHideListener() {
-            @Override
-            public void onClosePanel() {
-                mAnchorAudioPanel.setVisibility(View.GONE);
-                mAnchorAudioPanel.hideAudioPanel();
-            }
-        });
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 3);
         mInputTextMsgDialog = new InputTextMsgDialog(this, R.style.TRTCVoiceRoomInputDialog);
         mInputTextMsgDialog.setmOnTextSendListener(this);
@@ -497,8 +460,27 @@ public class VoiceRoomBaseActivity extends AppCompatActivity implements VoiceRoo
     }
 
     @Override
-    public void onUserVolumeUpdate(String userId, int volume) {
+    public void onUserVolumeUpdate(ArrayList<TRTCCloudDef.TRTCVolumeInfo> userVolumes, int totalVolume) {
+        Map<String, Integer> volumeMap = new HashMap<>();
+        for (TRTCCloudDef.TRTCVolumeInfo info : userVolumes) {
+            if (info.userId != null) {
+                volumeMap.put(info.userId, info.volume);
+            }
+        }
+        for (VoiceRoomSeatEntity entity : mVoiceRoomSeatEntityList) {
+            if (entity.isUsed && volumeMap.get(entity.userId) != null) {
+                int volume = volumeMap.get(entity.userId);
+                if (volume > 20) {
+                    entity.isTalk = true;
+                } else {
+                    entity.isTalk = false;
+                }
+            } else {
+                entity.isTalk = false;
+            }
 
+        }
+        mVoiceRoomSeatAdapter.notifyDataSetChanged();
     }
 
     @Override

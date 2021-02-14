@@ -4,14 +4,14 @@ import java.util.List;
 
 public class TRTCVoiceRoomCallback {
     /**
-     * 通用回调
+     * basic callback
      */
     public interface ActionCallback {
         void onCallback(int code, String msg);
     }
 
     /**
-     * 获取房间信息回调
+     * room infos callback
      */
     public interface RoomInfoCallback {
         void onCallback(int code, String msg, List<TRTCVoiceRoomDef.RoomInfo> list);
