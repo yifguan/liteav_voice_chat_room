@@ -112,7 +112,7 @@ class TRTCCreateVoiceRoomRootView: UIView {
     
     let tipsLabel: UILabel = {
         let label = UILabel.init(frame: .zero)
-        label.text = "The rom number will be created automatically, if it does not exit."
+        label.text = "The room number will be created automatically, if it does not exist."
         label.font = UIFont.systemFont(ofSize: 16.0)
         label.textColor = .placeholderBackColor
         label.textAlignment = .center

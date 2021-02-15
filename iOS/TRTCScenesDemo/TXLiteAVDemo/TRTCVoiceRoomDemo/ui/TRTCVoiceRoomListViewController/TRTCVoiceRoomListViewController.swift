@@ -75,5 +75,5 @@ public class TRTCVoiceRoomListViewController: UIViewController {
 }
 
 private extension String {
-    static let controllerTitle = "voice chat room"
+    static let controllerTitle = "Voice Chat Room"
 }

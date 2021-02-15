@@ -110,7 +110,7 @@ UIPickerViewDataSource, UIPickerViewDelegate> {
     __weak __typeof(self) wSelf = self;
     self.mainMenuItems = @[
         [[MainMenuItem alloc] initWithIcon:[UIImage imageNamed:@"MenuVoiceRoom"]
-                                     title:@"voice chat room"
+                                     title:@"Voice Chat Room"
                                    content:@""
                                   onSelect:^{ [wSelf gotoVoiceRoomView]; }],
     ];
