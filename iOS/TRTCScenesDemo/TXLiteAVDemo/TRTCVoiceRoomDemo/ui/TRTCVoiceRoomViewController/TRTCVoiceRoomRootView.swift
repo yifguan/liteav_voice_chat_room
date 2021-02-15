@@ -324,7 +324,7 @@ extension TRTCVoiceRoomRootView: TRTCVoiceRoomViewResponder {
     }
     
     func showToast(message: String) {
-        makeToast(message)
+        makeToast(message, duration: 1.5)
     }
     
     func popToPrevious() {

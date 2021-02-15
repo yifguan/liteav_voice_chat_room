@@ -126,10 +126,14 @@ UIPickerViewDataSource, UIPickerViewDelegate> {
     [self.titleLabel addGestureRecognizer:pressGesture];
     self.titleLabel.userInteractionEnabled = YES;
     [self setUpLogViews];
-    // 登录
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self setupToast];
+    [self.navigationController setNavigationBarHidden:YES];
     NSString *userID = [[ProfileManager shared] curUserID];
     NSString *userSig = [[ProfileManager shared] curUserSig];
-    [self showActivity];
     @weakify(self)
     [self.voiceRoom login:SDKAPPID userId:userID userSig:userSig callback:^(int32_t code, NSString * _Nonnull message) {
         NSLog(@"login voiceroom success.");
@@ -139,26 +143,8 @@ UIPickerViewDataSource, UIPickerViewDelegate> {
         NSString *avatar = [curUser.avatar isEqualToString:@""] ? @"https://imgcache.qq.com/qcloud/public/static//avatar1_100.20191230.png" : curUser.avatar;
         [self.voiceRoom setSelfProfile:name avatarURL:avatar callback:^(int32_t code, NSString * _Nonnull message) {
             NSLog(@"voiceroom: set self profile success.");
-            @strongify(self)
-            [self hideActivity];
         }];
     }];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [self setupToast];
-    [self.navigationController setNavigationBarHidden:YES];
-    NSString *userID = [[ProfileManager shared] curUserID];
-    NSString *userSig = [[ProfileManager shared] curUserSig];
-    
-    if (![[[V2TIMManager sharedInstance] getLoginUser] isEqual:userID]) {
-        [[ProfileManager shared] IMLoginWithUserSig:userSig success:^{
-            [self makeToastWithMessage:@"IM login success."];
-        } failed:^(NSString * error) {
-            [self makeToastWithMessage:@"IM login failed."];
-        }];
-    }
 }
 
 - (void)gotoVoiceRoomView {
@@ -176,10 +162,8 @@ UIPickerViewDataSource, UIPickerViewDelegate> {
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Confirm" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [[ProfileManager shared] removeLoginCache];
         [[AppUtils shared] showLoginController];
-        [[V2TIMManager sharedInstance] logout:^{
-            
-        } fail:^(int code, NSString *msg) {
-            
+        [self.voiceRoom logout:^(int code, NSString * _Nonnull message) {
+            NSLog(@"退出登录成功");
         }];
     }];
     [alert addAction:cancelAction];

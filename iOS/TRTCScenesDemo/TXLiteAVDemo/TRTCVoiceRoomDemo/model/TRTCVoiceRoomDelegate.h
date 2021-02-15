@@ -13,6 +13,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class TRTCVolumeInfo;
 @protocol TRTCVoiceRoomDelegate <NSObject>
 
 /// Callback for error
@@ -88,11 +89,10 @@ NS_SWIFT_NAME(onAudienceEnter(userInfo:));
 NS_SWIFT_NAME(onAudienceExit(userInfo:));
 
 /// Callback for user volume change
-/// @param userId User ID
-/// @param volume Volume information
-- (void)onUserVolumeUpdate:(NSString *)userId
-                              volume:(NSInteger)volume
-NS_SWIFT_NAME(onUserVolumeUpdate(userId:volume:));
+/// @param userVolumes Volume informations.
+/// @param totalVolume total volume
+- (void)onUserVoiceVolume:(NSArray<TRTCVolumeInfo *> *)userVolumes totalVolume:(NSInteger)totalVolume
+NS_SWIFT_NAME(onUserVoiceVolume(userVolumes:totalVolume:));
 
 /// Callback for text message receipt
 /// @param message Message content

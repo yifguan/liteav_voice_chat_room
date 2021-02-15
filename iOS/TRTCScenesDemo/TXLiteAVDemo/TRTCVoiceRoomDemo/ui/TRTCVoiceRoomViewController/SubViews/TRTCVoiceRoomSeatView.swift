@@ -46,6 +46,9 @@ class TRTCVoiceRoomSeatView: UIView {
         let width = self.frame.width
         avatarImageView.layer.cornerRadius = width / 2.0
         avatarImageView.layer.masksToBounds = true
+        speakView.layer.cornerRadius = (width + 6) / 2.0
+        speakView.layer.borderWidth = 6
+        speakView.layer.borderColor = UIColor.init(0x52a352).cgColor
     }
     
     let avatarImageView: UIImageView = {
@@ -54,6 +57,15 @@ class TRTCVoiceRoomSeatView: UIView {
         imageView.image = UIImage.init(named: "voiceroom_placeholder_avatar")
         return imageView
     }()
+    
+    let speakView: UIView = {
+        let view = UIView.init()
+        view.backgroundColor = UIColor.clear
+        view.isHidden = true
+        // 235,35,90
+        return view
+    }()
+    
     
     let muteImageView: UIImageView = {
         let imageView = UIImageView.init(frame: .zero)
@@ -93,6 +105,7 @@ class TRTCVoiceRoomSeatView: UIView {
     func constructViewHierarchy() {
         /// 此方法内只做add子视图操作
         addSubview(avatarImageView)
+        avatarImageView.addSubview(speakView)
         addSubview(muteImageView)
         addSubview(nameLabel)
     }
@@ -102,6 +115,10 @@ class TRTCVoiceRoomSeatView: UIView {
         avatarImageView.snp.makeConstraints { (make) in
             make.top.left.right.equalToSuperview()
             make.height.equalTo(snp.width)
+        }
+        speakView.snp.makeConstraints { (make) in
+            make.center.equalToSuperview()
+            make.height.width.equalTo(snp.width).offset(6)
         }
         muteImageView.snp.makeConstraints { (make) in
             make.center.equalTo(avatarImageView.snp.center)
@@ -130,11 +147,17 @@ class TRTCVoiceRoomSeatView: UIView {
             if let userSeatInfo = model.seatUser {
                 avatarImageView.sd_setImage(with: URL.init(string: userSeatInfo.userAvatar), placeholderImage: UIImage.init(named: "voiceroom_placeholder_avatar"), options: .allowInvalidSSLCertificates, context: nil)
                 nameLabel.text = userSeatInfo.userName
+                if model.isTalking {
+                    speakView.isHidden = false
+                } else {
+                    speakView.isHidden = true
+                }
             }
         } else {
             // 无人
             avatarImageView.image = UIImage.init(named: "voiceroom_placeholder_avatar")
             nameLabel.text = model.isOwner ? "Invite" : "hands up"
+            speakView.isHidden = true
         }
     }
 }

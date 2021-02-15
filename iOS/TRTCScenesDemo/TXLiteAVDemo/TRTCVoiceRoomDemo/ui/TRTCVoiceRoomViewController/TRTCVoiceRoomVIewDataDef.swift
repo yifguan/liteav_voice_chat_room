@@ -27,6 +27,7 @@ struct SeatInfoModel {
     var isClosed: Bool = false
     var isUsed: Bool = false
     var isOwner: Bool = false
+    var isTalking: Bool = false
     var seatInfo: VoiceRoomSeatInfo?
     var seatUser: VoiceRoomUserInfo?
     var action: ((Int) -> Void)? // 入参为SeatIndex

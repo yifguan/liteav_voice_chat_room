@@ -109,6 +109,8 @@
         }
         return;
     }
+    self.isLogin = NO;
+    self.isEnterRoom = NO;
     @weakify(self)
     [self.imManager logout:^{
         @strongify(self)
@@ -596,7 +598,7 @@
             }
         }
     } fail:^(int code, NSString *desc) {
-        
+        callback(code, desc, @[]);
     }];
 }
 

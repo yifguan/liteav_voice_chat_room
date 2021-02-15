@@ -77,7 +77,7 @@ public class TRTCVoiceRoomViewController: UIViewController {
     @objc func cancel() {
         // 取消后直接返回首页
         if viewModel?.roomType == VoiceRoomViewType.anchor {
-            presentAlert(title: "Exit", message: "Currently in audio interaction, whether to exit?") { [weak self] in
+            presentAlert(title: "Quit", message: "Do you want to leave this room?") { [weak self] in
                 guard let `self` = self else { return }
                 self.viewModel?.exitRoom() // 主播销毁房间
             }
@@ -90,7 +90,7 @@ public class TRTCVoiceRoomViewController: UIViewController {
 extension TRTCVoiceRoomViewController {
     func presentAlert(title: String, message: String, sureAction:@escaping () -> Void) {
         let alertVC = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
-        let alertOKAction = UIAlertAction.init(title: "OK", style: .default) { (action) in
+        let alertOKAction = UIAlertAction.init(title: "Confirm", style: .default) { (action) in
             alertVC.dismiss(animated: true, completion: nil)
             sureAction()
         }

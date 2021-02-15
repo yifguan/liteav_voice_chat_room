@@ -157,6 +157,7 @@
 - (void)internalEnterRoom{
     if (self.mTRTCParms) {
         self.mTRTCCloud.delegate = self;
+        [self enableAudioEvalutation:YES];
         [self.mTRTCCloud enterRoom:self.mTRTCParms appScene:TRTCAppSceneVoiceChatRoom];
     }
 }

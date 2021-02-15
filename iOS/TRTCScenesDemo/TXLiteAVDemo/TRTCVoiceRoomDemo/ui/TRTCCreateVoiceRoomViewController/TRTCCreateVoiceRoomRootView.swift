@@ -67,7 +67,7 @@ class TRTCCreateVoiceRoomRootView: UIView {
     
     let roomNameInputTextFiled: UITextField = {
         let textField = UITextField.init(frame: .zero)
-        textField.attributedPlaceholder = NSAttributedString.init(string: "Please enter the room topic", attributes: [.font: UIFont.systemFont(ofSize: 16.0), .foregroundColor: UIColor.placeholderBackColor])
+        textField.attributedPlaceholder = NSAttributedString.init(string: "Please enter a room topic", attributes: [.font: UIFont.systemFont(ofSize: 16.0), .foregroundColor: UIColor.placeholderBackColor])
         textField.textColor = UIColor.init(0xEBF4FF)
         textField.font = UIFont.systemFont(ofSize: 16.0)
         return textField
@@ -82,7 +82,7 @@ class TRTCCreateVoiceRoomRootView: UIView {
     
     let userNameLabel: UILabel = {
         let label = UILabel.init(frame: .zero)
-        label.text = "Nickname"
+        label.text = "Name"
         label.font = UIFont.systemFont(ofSize: 16.0)
         label.textColor = UIColor.init(0xEBF4FF)
         label.textAlignment = .left
@@ -98,84 +98,13 @@ class TRTCCreateVoiceRoomRootView: UIView {
         return textField
     }()
     
-    let roleLabel: UILabel = {
-        let label = UILabel.init(frame: .zero)
-        label.text = "speaking should be permitted by the host"
-        label.font = UIFont.systemFont(ofSize: 16.0)
-        label.textColor = UIColor.init(0xEBF4FF)
-        label.textAlignment = .left
-        label.numberOfLines = 4
-        return label
-    }()
-    
-    let roleButtonStack: UIStackView = {
-        let stack = UIStackView.init(frame: .zero)
-        stack.axis = .horizontal
-        stack.distribution = .equalSpacing
-        stack.alignment = .center
-        return stack
-    }()
-    
-    let roleSwitchButton: UISwitch = {
-        let roleSwitchButton = UISwitch.init()
-        roleSwitchButton.isOn = true
-        roleSwitchButton.onTintColor = .buttonBackColor
-        return roleSwitchButton
-    }()
-    
-    let toneQualityLabel: UILabel = {
-        let label = UILabel.init(frame: .zero)
-        label.text = "Sound quality "
-        label.font = UIFont.systemFont(ofSize: 16.0)
-        label.textColor = UIColor.init(0xEBF4FF)
-        label.textAlignment = .left
-        return label
-    }()
-    
-    let toneQualityStack: UIStackView = {
-        let stack = UIStackView.init(frame: .zero)
-        stack.axis = .horizontal
-        stack.distribution = .equalSpacing
-        stack.alignment = .center
-        return stack
-    }()
-    
-    let heightQualityButton: UIButton = {
-        let button = UIButton.init(type: .custom)
-        button.setTitle("Music", for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 14.0)
-        button.titleLabel?.adjustsFontSizeToFitWidth = true
-        button.setImage(UIImage.init(named: "voiceroom_oval"), for: .normal)
-        button.setImage(UIImage.init(named: "voiceroom_selected"), for: .selected)
-        button.contentHorizontalAlignment = .left
-        button.contentEdgeInsets = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0)
-        button.imageEdgeInsets = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 5)
-        button.titleEdgeInsets = UIEdgeInsets.init(top: 0, left: 5, bottom: 0, right: 0)
-        button.imageView?.contentMode = .scaleAspectFit
-        return button
-    }()
-    
-    let mediumQualityButton: UIButton = {
-        let button = UIButton.init(type: .custom)
-        button.setTitle("Standard", for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 14.0)
-        button.titleLabel?.adjustsFontSizeToFitWidth = true
-        button.setImage(UIImage.init(named: "voiceroom_oval"), for: .normal)
-        button.setImage(UIImage.init(named: "voiceroom_selected"), for: .selected)
-        button.contentHorizontalAlignment = .left
-        button.contentEdgeInsets = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 0)
-        button.imageEdgeInsets = UIEdgeInsets.init(top: 0, left: 0, bottom: 0, right: 5)
-        button.titleEdgeInsets = UIEdgeInsets.init(top: 0, left: 5, bottom: 0, right: 0)
-        button.imageView?.contentMode = .scaleAspectFit
-        return button
-    }()
     
     let enterRoomButton: UIButton = {
         let button = UIButton.init(type: .custom)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16.0)
         button.setTitleColor(UIColor.init(0x56749E), for: .disabled)
         button.setTitleColor(UIColor.init(0xFFFFFF), for: .normal)
-        button.setTitle("Create a voice chat room", for: .normal)
+        button.setTitle("Create a room to start", for: .normal)
         button.setBackgroundImage(UIColor.inputImageBackColor.trans2Image(), for: .disabled)
         button.setBackgroundImage(UIColor.buttonBackColor.trans2Image(), for: .normal)
         return button
@@ -183,7 +112,7 @@ class TRTCCreateVoiceRoomRootView: UIView {
     
     let tipsLabel: UILabel = {
         let label = UILabel.init(frame: .zero)
-        label.text = "If the room number does not exist, it will be automatically created. And then you will enter to the room."
+        label.text = "The rom number will be created automatically, if it does not exit."
         label.font = UIFont.systemFont(ofSize: 16.0)
         label.textColor = .placeholderBackColor
         label.textAlignment = .center
@@ -214,10 +143,6 @@ class TRTCCreateVoiceRoomRootView: UIView {
         inputContainer.addSubview(cuttingLine)
         inputContainer.addSubview(userNameLabel)
         inputContainer.addSubview(userNameTextFiled)
-        // 设置区域
-        addSubview(roleButtonStack)
-        roleButtonStack.addArrangedSubview(roleLabel)
-        roleButtonStack.addArrangedSubview(roleSwitchButton)
         // 进入按钮区域
         addSubview(enterRoomButton)
         addSubview(tipsLabel)
@@ -230,17 +155,12 @@ class TRTCCreateVoiceRoomRootView: UIView {
     }
 
     func bindInteraction() {
-        roleSwitchButton.isOn = viewModel.needRequest
-        mediumQualityButton.isSelected = true
         roomNameInputTextFiled.delegate = self
         userNameTextFiled.delegate = self
         
         roomNameInputTextFiled.text = viewModel.roomName
         userNameTextFiled.text = viewModel.userName
         /// 此方法负责做viewModel和视图的绑定操作
-        roleSwitchButton.addTarget(self, action: #selector(roleAction(_:)), for: .touchUpInside)
-        heightQualityButton.addTarget(self, action: #selector(qulityAction(_:)), for: .touchUpInside)
-        mediumQualityButton.addTarget(self, action: #selector(qulityAction(_:)), for: .touchUpInside)
         enterRoomButton.addTarget(self, action: #selector(enterRoomAction(_:)), for: .touchUpInside)
     }
     
@@ -285,13 +205,7 @@ extension TRTCCreateVoiceRoomRootView {
    
     @objc
     func qulityAction(_ sender: UIButton) {
-        heightQualityButton.isSelected = sender == heightQualityButton
-        mediumQualityButton.isSelected = sender == mediumQualityButton
-        var quality = VoiceRoomToneQuality.music
-        if mediumQualityButton.isSelected {
-            quality = .defaultQuality
-        }
-        viewModel.toneQuality = quality
+        viewModel.toneQuality = .defaultQuality
     }
     
     @objc
@@ -362,20 +276,7 @@ extension TRTCCreateVoiceRoomRootView {
     }
     
     func activateConstraintsOfButtonItem() {
-        
-        roleButtonStack.snp.makeConstraints { (make) in
-            make.top.equalTo(inputContainer.snp.bottom).offset(30)
-            make.left.equalToSuperview().offset(36)
-            make.right.equalToSuperview().offset(-36)
-            make.height.equalTo(60)
-        }
-        roleLabel.sizeToFit()
-        [roleSwitchButton].forEach { (button) in
-            button.snp.makeConstraints { (make) in
-                make.height.equalTo(24)
-                make.width.equalTo(60)
-            }
-        }
+
     }
     
     func activateConstraintsOfEnterRoom() {
@@ -383,7 +284,7 @@ extension TRTCCreateVoiceRoomRootView {
             make.left.equalToSuperview().offset(20)
             make.right.equalToSuperview().offset(-20)
             make.height.equalTo(48)
-            make.top.equalTo(roleButtonStack.snp.bottom).offset(30)
+            make.top.equalTo(userNameLabel.snp.bottom).offset(30)
         }
         
         tipsLabel.snp.makeConstraints { (make) in

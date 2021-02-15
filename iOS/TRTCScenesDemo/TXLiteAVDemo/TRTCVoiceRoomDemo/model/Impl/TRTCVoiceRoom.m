@@ -958,11 +958,9 @@ static dispatch_once_t onceToken;
         if (!self) {
             return;
         }
-        [userVolumes enumerateObjectsUsingBlock:^(TRTCVolumeInfo * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            if ([self canDelegateResponseMethod:@selector(onUserVolumeUpdate:volume:)] && obj.userId) {
-                [self.delegate onUserVolumeUpdate:obj.userId volume:obj.volume];
-            }
-        }];
+        if ([self canDelegateResponseMethod:@selector(onUserVoiceVolume:totalVolume:)]) {
+            [self.delegate onUserVoiceVolume:userVolumes totalVolume:totalVolume];
+        }
     }];
 }
 
