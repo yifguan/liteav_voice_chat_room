@@ -76,10 +76,17 @@ public class TRTCVoiceRoomViewController: UIViewController {
     /// 取消
     @objc func cancel() {
         // 取消后直接返回首页
-        if viewModel?.roomType == VoiceRoomViewType.anchor {
-            presentAlert(title: "Quit", message: "Do you want to leave this room?") { [weak self] in
-                guard let `self` = self else { return }
-                self.viewModel?.exitRoom() // 主播销毁房间
+        if viewModel?.roomType == VoiceRoomViewType.anchor  {
+            if viewModel?.isOwner ?? false {
+                presentAlert(title: "Dismiss", message: "Do you want to dismiss this room?") { [weak self] in
+                    guard let `self` = self else { return }
+                    self.viewModel?.exitRoom() // 主播销毁房间
+                }
+            } else {
+                presentAlert(title: "Quit", message: "Do you want to leave this room?") { [weak self] in
+                    guard let `self` = self else { return }
+                    self.viewModel?.exitRoom() // 主播销毁房间
+                }
             }
         } else {
             self.viewModel?.exitRoom()

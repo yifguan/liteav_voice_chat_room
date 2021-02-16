@@ -34,6 +34,9 @@ class TRTCVoiceRoomViewModel: NSObject {
         }
     }
     public weak var viewResponder: TRTCVoiceRoomViewResponder?
+    public var isOwner: Bool {
+        return roomInfo.ownerId == dependencyContainer.userId
+    }
     
     private(set) var isSelfMute: Bool = false
     // 防止多次退房
@@ -60,7 +63,6 @@ class TRTCVoiceRoomViewModel: NSObject {
     private var mTakeSeatInvitationDic: [String: String] = [:]
     /// 抱麦信息记录
     private var mPickSeatInvitationDic: [String: SeatInvitation] = [:]
-    
     
     /// 房间管理对象
     private var voiceRoomManager: TRTCVoiceRoomManager {
@@ -681,7 +683,7 @@ extension TRTCVoiceRoomViewModel: TRTCVoiceRoomDelegate {
             // 房主下麦就不提醒了
             return;
         }
-        showNotifyMsg(messsage: "\(user.userName) leaves the no.\(index) seat")
+        showNotifyMsg(messsage: "\(user.userName) left the #\(index) seat")
         if user.userId == dependencyContainer.userId {
             roomType = .audience
             mSelfSeatIndex = -1
@@ -814,9 +816,9 @@ extension TRTCVoiceRoomViewModel: TRTCVoiceRoomDelegate {
                 voiceRoom.enterSeat(seatIndex: seatIndex) { [weak self] (code, message) in
                     guard let `self` = self else { return }
                     if code == 0 {
-                        self.viewResponder?.showToast(message: "Success.")
+                        self.viewResponder?.showToast(message: "Success")
                     } else {
-                        self.viewResponder?.showToast(message: "Failed.")
+                        self.viewResponder?.showToast(message: "Failed")
                     }
                 }
             }
