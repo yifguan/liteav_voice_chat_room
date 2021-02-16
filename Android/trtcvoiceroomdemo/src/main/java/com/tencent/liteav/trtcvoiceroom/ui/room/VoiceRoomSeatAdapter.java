@@ -109,10 +109,9 @@ public class VoiceRoomSeatAdapter extends
                     mTvName.setText("Loading");
                 }
                 if (model.isTalk) {
-                    mImgHead.setBorderColor(context.getResources().getColor(R.color.trtcvoiceroom_text_color_second));
-                    mImgHead.setBorderWidth(5);
+                    mImgHead.setBorderColor(context.getResources().getColor(R.color.trtcvoiceroom_color_head_talk));
                 } else {
-                    mImgHead.setBorderColor(context.getResources().getColor(R.color.trtcvoiceroom_transparent));
+                    mImgHead.setBorderColor(context.getResources().getColor(R.color.trtcvoiceroom_color_head_not_talk));
                 }
             }
             if (model.isMute) {

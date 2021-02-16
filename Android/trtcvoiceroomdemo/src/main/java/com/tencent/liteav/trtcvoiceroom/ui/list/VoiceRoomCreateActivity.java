@@ -33,9 +33,6 @@ public class VoiceRoomCreateActivity extends AppCompatActivity {
     private EditText     mUserNameEt;
     private TextView     mEnterTv;
     private boolean      mNeedOwnerAgree = true;
-    private SwitchCompat mSwitchNeedQuest;
-    private RadioButton  mRbNormal;
-    private RadioButton  mRbMusic;
 
 
     private TextWatcher mEditTextWatcher = new TextWatcher() {
@@ -77,25 +74,16 @@ public class VoiceRoomCreateActivity extends AppCompatActivity {
         });
         mRoomNameEt.addTextChangedListener(mEditTextWatcher);
         mUserNameEt.addTextChangedListener(mEditTextWatcher);
-        mRbNormal = (RadioButton) findViewById(R.id.rb_normal);
-        mRbMusic = (RadioButton) findViewById(R.id.rb_music);
         mEnterTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 createRoom();
             }
         });
-        setStyle(mRbNormal);
-        setStyle(mRbMusic);
     }
 
     private void createRoom() {
         int audioQuality = TRTCCloudDef.TRTC_AUDIO_QUALITY_DEFAULT;
-//        if (mRbNormal.isChecked()) {
-//            audioQuality = TRTCCloudDef.TRTC_AUDIO_QUALITY_DEFAULT;
-//        } else if (mRbMusic.isChecked()) {
-//            audioQuality = TRTCCloudDef.TRTC_AUDIO_QUALITY_MUSIC;
-//        }
         String roomName    = mRoomNameEt.getText().toString();
         String userId      = ProfileManager.getInstance().getUserModel().userId;
         String userName    = mUserNameEt.getText().toString();
@@ -109,15 +97,6 @@ public class VoiceRoomCreateActivity extends AppCompatActivity {
         mRoomNameEt = (EditText) findViewById(R.id.et_room_name);
         mUserNameEt = (EditText) findViewById(R.id.et_user_name);
         mEnterTv = (TextView) findViewById(R.id.tv_enter);
-        mSwitchNeedQuest = (SwitchCompat) findViewById(R.id.switch_need_request);
-        mEnterTv.setEnabled(false);
-        mSwitchNeedQuest.setChecked(true);
-        mSwitchNeedQuest.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                mNeedOwnerAgree = isChecked;
-            }
-        });
     }
 
     private void initPermission() {
@@ -125,14 +104,5 @@ public class VoiceRoomCreateActivity extends AppCompatActivity {
             PermissionUtils.permission(PermissionConstants.STORAGE, PermissionConstants.MICROPHONE, PermissionConstants.CAMERA)
                     .request();
         }
-    }
-
-    private void setStyle(RadioButton rb) {
-        Drawable drawable = getResources().getDrawable(R.drawable.trtcvoiceroom_bg_rb_icon_selector);
-        //定义底部标签图片大小和位置
-        drawable.setBounds(0, 0, 70, 70);
-        //设置图片在文字的哪个方向
-        rb.setCompoundDrawables(drawable, null, null, null);
-        rb.setCompoundDrawablePadding(20);
     }
 }

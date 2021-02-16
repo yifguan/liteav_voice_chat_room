@@ -217,7 +217,7 @@ public class VoiceRoomBaseActivity extends AppCompatActivity implements VoiceRoo
     /**
      *     /////////////////////////////////////////////////////////////////////////////////
      *     //
-     *     //                      发送文本信息
+     *     //                      send text massage
      *     //
      *     /////////////////////////////////////////////////////////////////////////////////
      */
@@ -478,9 +478,15 @@ public class VoiceRoomBaseActivity extends AppCompatActivity implements VoiceRoo
             } else {
                 entity.isTalk = false;
             }
-
         }
         mVoiceRoomSeatAdapter.notifyDataSetChanged();
+        // main seat anchor
+        Integer mainSeatVol = volumeMap.get(mMainSeatUserId);
+        if (mainSeatVol != null && mainSeatVol > 20) {
+            mImgHead.setBorderColor(getResources().getColor(R.color.trtcvoiceroom_color_head_talk));
+        } else {
+            mImgHead.setBorderColor(getResources().getColor(R.color.trtcvoiceroom_color_head_not_talk));
+        }
     }
 
     @Override
