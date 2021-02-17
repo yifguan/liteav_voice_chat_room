@@ -82,14 +82,6 @@ class TRTCVoiceRoomRootView: UIView {
         return view
     }()
     
-    lazy var audioEffectView: AudioEffectSettingView = {
-        let view = AudioEffectSettingView.init(type: .default)
-        if let manager = TRTCCloud.sharedInstance()?.getAudioEffectManager() {
-            view.setAudioEffectManager(manager)
-        }
-        return view
-    }()
-    
     deinit {
         TRTCLog.out("reset audio settings")
     }
@@ -116,7 +108,7 @@ class TRTCVoiceRoomRootView: UIView {
         addSubview(mainMenuView)
         addSubview(msgInputView)
         addSubview(audiceneListView)
-        addSubview(audioEffectView)
+
     }
 
     func activateConstraints() {
@@ -248,15 +240,15 @@ extension TRTCVoiceRoomRootView {
 extension TRTCVoiceRoomRootView: TRTCVoiceRoomViewResponder {
     
     func stopPlayBGM() {
-        audioEffectView.stopPlay()
+        
     }
     
     func recoveryVoiceSetting() {
-        audioEffectView.recoveryVoiceSetting()
+        
     }
     
     func showAudioEffectView() {
-        audioEffectView.show()
+        
     }
     
     func audienceListRefresh() {
@@ -329,7 +321,7 @@ extension TRTCVoiceRoomRootView: TRTCVoiceRoomViewResponder {
     
     func popToPrevious() {
         rootViewController?.navigationController?.popViewController(animated: true)
-         audioEffectView.resetAudioSetting()
+
     }
     
     func switchView(type: VoiceRoomViewType) {

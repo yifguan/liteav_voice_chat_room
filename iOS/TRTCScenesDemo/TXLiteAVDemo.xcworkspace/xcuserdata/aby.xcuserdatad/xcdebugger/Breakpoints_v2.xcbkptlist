@@ -7,32 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C7437059-A37E-4283-94F7-C3FDB11CEE26"
+            uuid = "19002924-95E9-42D3-A2EB-B4BD5321984D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TXLiteAVDemo/TRTCVoiceRoomDemo/model/Impl/TRTCVoiceRoom.m"
+            filePath = "TXLiteAVDemo/App/Portal/PortalViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158"
-            landmarkName = "-getAudienceList:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5DA18882-406D-4293-9C26-25F94FCB486C"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TXLiteAVDemo/TRTCVoiceRoomDemo/model/Impl/TRTCVoiceRoom.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1040"
-            endingLineNumber = "1040"
-            landmarkName = "-onRoomInfoChange:"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
+            landmarkName = "-logout:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

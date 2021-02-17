@@ -81,8 +81,6 @@
 		40B3F9E22446EF11000C37A3 /* TCUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B3F9DD2446EF11000C37A3 /* TCUtil.m */; };
 		40B3F9FF2447042C000C37A3 /* HUDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B3F9FD2447042B000C37A3 /* HUDHelper.m */; };
 		40B3FA022447056D000C37A3 /* UIColor+MLPFlatColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B3FA002447056D000C37A3 /* UIColor+MLPFlatColors.m */; };
-		40B5C68C2484BBFC00D3A718 /* AudioEffectSettingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40B5C6832484BBE500D3A718 /* AudioEffectSettingKit.framework */; };
-		40B5C6942484BE4800D3A718 /* AudioEffectSettingKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 40B5C6872484BBE500D3A718 /* AudioEffectSettingKitResources.bundle */; };
 		40E1F4492468F74A00F3D350 /* NSString+UISize.m in Sources */ = {isa = PBXBuildFile; fileRef = 457FD2F921C7530C00EEB03F /* NSString+UISize.m */; };
 		40E1F44F2468F75300F3D350 /* NSDictionary+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A395A02234AEE9700AFBCE8 /* NSDictionary+Common.m */; };
 		40E25FCE2480C797005EB543 /* Portal+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E25FCC2480C796005EB543 /* Portal+Swift.swift */; };
@@ -110,27 +108,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 454616C223797C39009CDF83;
 			remoteInfo = UGCKitResources;
-		};
-		40B5C6822484BBE500D3A718 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 401A9B3D247FCC7600C0763B /* AudioEffectSettingKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 40AF719A247D036200EBB371;
-			remoteInfo = AudioEffectSettingKit;
-		};
-		40B5C6862484BBE500D3A718 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 401A9B3D247FCC7600C0763B /* AudioEffectSettingKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 40AF71C9247D08F700EBB371;
-			remoteInfo = AudioEffectSettingKitResources;
-		};
-		40B5C68A2484BBF600D3A718 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 401A9B3D247FCC7600C0763B /* AudioEffectSettingKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 40AF71C8247D08F700EBB371;
-			remoteInfo = AudioEffectSettingKitResources;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -163,7 +140,6 @@
 		2840D91B24B8562200723FBC /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		30CB7B0BE668C7B577DE8896 /* LoginViewController_Mock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginViewController_Mock.swift; sourceTree = "<group>"; };
 		4004FF601EC7FB44D81E5934 /* Pods-TXReplaykitUpload_TRTC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TXReplaykitUpload_TRTC.release.xcconfig"; path = "Target Support Files/Pods-TXReplaykitUpload_TRTC/Pods-TXReplaykitUpload_TRTC.release.xcconfig"; sourceTree = "<group>"; };
-		401A9B3D247FCC7600C0763B /* AudioEffectSettingKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = AudioEffectSettingKit.xcodeproj; sourceTree = "<group>"; };
 		402A00DD2450552E0037A219 /* TXLiteAVDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TXLiteAVDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		402A010024506F740037A219 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = App/main.m; sourceTree = "<group>"; };
 		402A010724506F9C0037A219 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = App/Info.plist; sourceTree = "<group>"; };
@@ -273,8 +249,6 @@
 		457FD2F821C7530C00EEB03F /* NSString+UISize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+UISize.h"; sourceTree = "<group>"; };
 		457FD2F921C7530C00EEB03F /* NSString+UISize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+UISize.m"; sourceTree = "<group>"; };
 		45C37797226765A60054D0B8 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
-		45CC58AA246290BB002A914E /* SimpleIPC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleIPC.m; sourceTree = "<group>"; };
-		45CC58AB246290BB002A914E /* SimpleIPC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleIPC.h; sourceTree = "<group>"; };
 		4B4B291177070EC8D226E1E2 /* Pods-TXLiteAVDemo_TRTC_AppStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TXLiteAVDemo_TRTC_AppStore.release.xcconfig"; path = "Target Support Files/Pods-TXLiteAVDemo_TRTC_AppStore/Pods-TXLiteAVDemo_TRTC_AppStore.release.xcconfig"; sourceTree = "<group>"; };
 		51A289F8230FB93A00B9B73F /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		51A4AD391F1F8AE300B4A806 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -285,16 +259,12 @@
 		6A03ED401FD13DFB00F2F063 /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
 		6A395A01234AEE9700AFBCE8 /* NSDictionary+Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Common.h"; sourceTree = "<group>"; };
 		6A395A02234AEE9700AFBCE8 /* NSDictionary+Common.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Common.m"; sourceTree = "<group>"; };
-		6A503178249D03B200701E6B /* TRTCInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TRTCInfo.plist; sourceTree = "<group>"; };
 		6A50318D249D03E000701E6B /* TXReplaykitUpload_TRTC_AppStore.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TXReplaykitUpload_TRTC_AppStore.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A50322E24A1A68E00701E6B /* UserProtocol.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = UserProtocol.html; sourceTree = "<group>"; };
 		6AAEC38A2499E08100B57D86 /* TXLiteAVSDK_ReplayKitExt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TXLiteAVSDK_ReplayKitExt.framework; sourceTree = "<group>"; };
 		78833A06B3E3C43A9C3CD304 /* Pods-TXReplaykitUpload_TRTC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TXReplaykitUpload_TRTC.debug.xcconfig"; path = "Target Support Files/Pods-TXReplaykitUpload_TRTC/Pods-TXReplaykitUpload_TRTC.debug.xcconfig"; sourceTree = "<group>"; };
 		80725CC766497EA33A06527D /* AppUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
 		91D47F3920B6B13C0072AC0B /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
-		91D47F3C20B6B13C0072AC0B /* SampleHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleHandler.h; sourceTree = "<group>"; };
-		91D47F3D20B6B13C0072AC0B /* SampleHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleHandler.m; sourceTree = "<group>"; };
-		91D47F3F20B6B13C0072AC0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91F87A7E1FF4A0FC001644B1 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		A256AF019D8E84B3B797494C /* libPods-TXLiteAVDemo_TRTC_AppStore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TXLiteAVDemo_TRTC_AppStore.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A32AD4BB38080AB19D3659FC /* libPods-TXLiteAVDemo_TRTC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TXLiteAVDemo_TRTC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -315,7 +285,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40B5C68C2484BBFC00D3A718 /* AudioEffectSettingKit.framework in Frameworks */,
 				40B3F6AF2446E518000C37A3 /* libsqlite3.tbd in Frameworks */,
 				40B3F6B02446E518000C37A3 /* Foundation.framework in Frameworks */,
 				40B3F6B22446E518000C37A3 /* AVFoundation.framework in Frameworks */,
@@ -341,14 +310,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		401A9A56247FCC6300C0763B /* AudioSettingKit */ = {
-			isa = PBXGroup;
-			children = (
-				401A9B3D247FCC7600C0763B /* AudioEffectSettingKit.xcodeproj */,
-			);
-			path = AudioSettingKit;
-			sourceTree = "<group>";
-		};
 		402A010A245070290037A219 /* BridgeHeader */ = {
 			isa = PBXGroup;
 			children = (
@@ -560,22 +521,12 @@
 			path = CommonUtils;
 			sourceTree = "<group>";
 		};
-		40B5C67D2484BBE500D3A718 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				40B5C6832484BBE500D3A718 /* AudioEffectSettingKit.framework */,
-				40B5C6872484BBE500D3A718 /* AudioEffectSettingKitResources.bundle */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		40F852FA1EE8FB3800EE47D7 = {
 			isa = PBXGroup;
 			children = (
 				40495B9E2459713400AF53CB /* TXLiteAVDemo_TRTCRelease.entitlements */,
 				45736E91243F5B2200F7F601 /* SDK */,
 				40F853051EE8FB3800EE47D7 /* TXLiteAVDemo */,
-				91D47F3B20B6B13C0072AC0B /* ReplaykitUpload */,
 				40F854FF1EE8FD2F00EE47D7 /* Frameworks */,
 				40F853041EE8FB3800EE47D7 /* Products */,
 				DE336FBCF7A8A2B1C7E9E0C1 /* Pods */,
@@ -595,7 +546,6 @@
 		40F853051EE8FB3800EE47D7 /* TXLiteAVDemo */ = {
 			isa = PBXGroup;
 			children = (
-				401A9A56247FCC6300C0763B /* AudioSettingKit */,
 				40F853241EE8FC8400EE47D7 /* App */,
 				40B3F8DB2446E6C5000C37A3 /* Debug */,
 				40B3F8F52446E6C5000C37A3 /* TRTCVoiceRoomDemo */,
@@ -736,19 +686,6 @@
 			path = TXLiteAVDemo/Login;
 			sourceTree = SOURCE_ROOT;
 		};
-		91D47F3B20B6B13C0072AC0B /* ReplaykitUpload */ = {
-			isa = PBXGroup;
-			children = (
-				6A503178249D03B200701E6B /* TRTCInfo.plist */,
-				45CC58AB246290BB002A914E /* SimpleIPC.h */,
-				45CC58AA246290BB002A914E /* SimpleIPC.m */,
-				91D47F3C20B6B13C0072AC0B /* SampleHandler.h */,
-				91D47F3D20B6B13C0072AC0B /* SampleHandler.m */,
-				91D47F3F20B6B13C0072AC0B /* Info.plist */,
-			);
-			path = ReplaykitUpload;
-			sourceTree = "<group>";
-		};
 		DE336FBCF7A8A2B1C7E9E0C1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -785,7 +722,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				40B5C68B2484BBF600D3A718 /* PBXTargetDependency */,
 			);
 			name = TXLiteAVDemo_TRTC;
 			productName = TXLiteAVDemo;
@@ -827,10 +763,6 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 40B5C67D2484BBE500D3A718 /* Products */;
-					ProjectRef = 401A9B3D247FCC7600C0763B /* AudioEffectSettingKit.xcodeproj */;
-				},
-				{
 					ProductGroup = 40A49D5F24598CD200BFCB18 /* Products */;
 					ProjectRef = 40A49D5E24598CD200BFCB18 /* UGCKit.xcodeproj */;
 				},
@@ -857,20 +789,6 @@
 			remoteRef = 40A49D6624598CD700BFCB18 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		40B5C6832484BBE500D3A718 /* AudioEffectSettingKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = AudioEffectSettingKit.framework;
-			remoteRef = 40B5C6822484BBE500D3A718 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		40B5C6872484BBE500D3A718 /* AudioEffectSettingKitResources.bundle */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = AudioEffectSettingKitResources.bundle;
-			remoteRef = 40B5C6862484BBE500D3A718 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -878,7 +796,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40B5C6942484BE4800D3A718 /* AudioEffectSettingKitResources.bundle in Resources */,
 				4090F791246AE23B00EA72A0 /* Portal.storyboard in Resources */,
 				6A50323624A1A68E00701E6B /* UserProtocol.html in Resources */,
 				40B3F6C72446E518000C37A3 /* FilterResource.bundle in Resources */,
@@ -1054,14 +971,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		40B5C68B2484BBF600D3A718 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = AudioEffectSettingKitResources;
-			targetProxy = 40B5C68A2484BBF600D3A718 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		40F853311EE8FC9B00EE47D7 /* LaunchScreen.storyboard */ = {

@@ -55,7 +55,6 @@ public class TRTCVoiceRoomViewController: UIViewController {
     public override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         guard let rootView = self.view as? TRTCVoiceRoomRootView else { return }
-        rootView.audioEffectView.resetAudioSetting()
         UIApplication.shared.isIdleTimerDisabled = false
     }
     

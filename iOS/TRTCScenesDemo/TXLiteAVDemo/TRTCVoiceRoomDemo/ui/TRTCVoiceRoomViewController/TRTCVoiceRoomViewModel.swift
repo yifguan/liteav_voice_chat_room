@@ -818,7 +818,7 @@ extension TRTCVoiceRoomViewModel: TRTCVoiceRoomDelegate {
                     if code == 0 {
                         self.viewResponder?.showToast(message: "Success")
                     } else {
-                        self.viewResponder?.showToast(message: "Failed")
+                        self.viewResponder?.showToast(message: "Failedx")
                     }
                 }
             }

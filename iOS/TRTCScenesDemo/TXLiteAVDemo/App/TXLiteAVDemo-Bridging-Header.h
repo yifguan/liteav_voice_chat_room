@@ -14,7 +14,6 @@
 #endif
 
 #ifdef ENABLE_TRTC
-#import <AudioEffectSettingKit/AudioEffectSettingKit.h>
 #import "TRTCVoiceRoomDef.h"
 #import "TRTCVoiceRoom.h"
 #endif
