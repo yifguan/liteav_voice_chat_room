@@ -5,9 +5,9 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "TXLiveBase.h"
 
-@interface TCLog : NSObject<TXLiveBaseDelegate>
+
+@interface TCLog : NSObject
 
 + (instancetype)shareInstance;
 

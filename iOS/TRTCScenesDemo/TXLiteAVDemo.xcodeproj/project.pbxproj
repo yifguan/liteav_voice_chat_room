@@ -40,6 +40,7 @@
 		4046B15A24B36AD700F27349 /* TXBaseDef.m in Sources */ = {isa = PBXBuildFile; fileRef = 4046B13E24B36AD700F27349 /* TXBaseDef.m */; };
 		4046B15E24B36AD700F27349 /* TRTCVoiceRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 4046B14124B36AD700F27349 /* TRTCVoiceRoom.m */; };
 		4046B16324B36C0A00F27349 /* TRTCLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4046B16024B36C0A00F27349 /* TRTCLog.swift */; };
+		4063A50825E34A0600A7F335 /* TXLiteAVSDK_TRTC_Smart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4063A50725E34A0600A7F335 /* TXLiteAVSDK_TRTC_Smart.framework */; };
 		4090F790246AE23B00EA72A0 /* PortalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4090F78A246AE23B00EA72A0 /* PortalViewController.m */; };
 		4090F791246AE23B00EA72A0 /* Portal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4090F78C246AE23B00EA72A0 /* Portal.storyboard */; };
 		4090F792246AE23B00EA72A0 /* MainMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4090F78E246AE23B00EA72A0 /* MainMenuCell.m */; };
@@ -69,7 +70,6 @@
 		40B3F6BB2446E518000C37A3 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F855401EE8FDD300EE47D7 /* CoreMedia.framework */; };
 		40B3F6BC2446E518000C37A3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F8553E1EE8FDCC00EE47D7 /* CoreGraphics.framework */; };
 		40B3F6BD2446E518000C37A3 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F8553A1EE8FDBF00EE47D7 /* Accelerate.framework */; };
-		40B3F6BE2446E518000C37A3 /* TXLiteAVSDK_TRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45736E97243F5B2200F7F601 /* TXLiteAVSDK_TRTC.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		40B3F6BF2446E518000C37A3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F855381EE8FDB600EE47D7 /* Security.framework */; };
 		40B3F6C02446E518000C37A3 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F855361EE8FDAD00EE47D7 /* AssetsLibrary.framework */; };
 		40B3F6C72446E518000C37A3 /* FilterResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CE7C6E4A1FC2C5320095663F /* FilterResource.bundle */; };
@@ -182,6 +182,7 @@
 		4046B14324B36AD700F27349 /* TRTCVoiceRoomDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRTCVoiceRoomDef.h; sourceTree = "<group>"; };
 		4046B16024B36C0A00F27349 /* TRTCLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRTCLog.swift; sourceTree = "<group>"; };
 		40495B9E2459713400AF53CB /* TXLiteAVDemo_TRTCRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TXLiteAVDemo_TRTCRelease.entitlements; sourceTree = "<group>"; };
+		4063A50725E34A0600A7F335 /* TXLiteAVSDK_TRTC_Smart.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TXLiteAVSDK_TRTC_Smart.framework; sourceTree = "<group>"; };
 		4071CF702444477A000B7707 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		4072566824B55D5000DD44EF /* TRTCVoiceRoomDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TRTCVoiceRoomDelegate.h; sourceTree = "<group>"; };
 		4074E61B249F057F006C591F /* libPods-TXReplaykitUpload_TRTC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-TXReplaykitUpload_TRTC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -245,7 +246,6 @@
 		40F855481EE8FDF100EE47D7 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		40F8554C1EE8FDFC00EE47D7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		40F8554E1EE8FE0100EE47D7 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
-		45736E97243F5B2200F7F601 /* TXLiteAVSDK_TRTC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TXLiteAVSDK_TRTC.framework; sourceTree = "<group>"; };
 		457FD2F821C7530C00EEB03F /* NSString+UISize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+UISize.h"; sourceTree = "<group>"; };
 		457FD2F921C7530C00EEB03F /* NSString+UISize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+UISize.m"; sourceTree = "<group>"; };
 		45C37797226765A60054D0B8 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -300,8 +300,8 @@
 				40B3F6BB2446E518000C37A3 /* CoreMedia.framework in Frameworks */,
 				40B3F6BC2446E518000C37A3 /* CoreGraphics.framework in Frameworks */,
 				40B3F6BD2446E518000C37A3 /* Accelerate.framework in Frameworks */,
-				40B3F6BE2446E518000C37A3 /* TXLiteAVSDK_TRTC.framework in Frameworks */,
 				40B3F6BF2446E518000C37A3 /* Security.framework in Frameworks */,
+				4063A50825E34A0600A7F335 /* TXLiteAVSDK_TRTC_Smart.framework in Frameworks */,
 				40B3F6C02446E518000C37A3 /* AssetsLibrary.framework in Frameworks */,
 				BD32F8A6AF7CC2FF9A53096E /* libPods-TXLiteAVDemo_TRTC.a in Frameworks */,
 			);
@@ -665,7 +665,7 @@
 			isa = PBXGroup;
 			children = (
 				6AAEC38A2499E08100B57D86 /* TXLiteAVSDK_ReplayKitExt.framework */,
-				45736E97243F5B2200F7F601 /* TXLiteAVSDK_TRTC.framework */,
+				4063A50725E34A0600A7F335 /* TXLiteAVSDK_TRTC_Smart.framework */,
 			);
 			name = SDK;
 			path = ../SDK;
@@ -1028,7 +1028,9 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(CONFIGURATION_BUILD_DIR)/TXLiteAVSDK_TRTC.framework/Headers",
+					"$(CONFIGURATION_BUILD_DIR)/TXLiteAVSDK_TRTC_Smart.framework/Headers",
 					"$(PROJECT_DIR)/../SDK/TXLiteAVSDK_TRTC.framework/Headers",
+					"$(PROJECT_DIR)/../SDK/TXLiteAVSDK_TRTC_Smart.framework/Headers",
 				);
 				INFOPLIST_FILE = "TXLiteAVDemo/App/TRTC-Appstore-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1084,6 +1086,8 @@
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(CONFIGURATION_BUILD_DIR)/TXLiteAVSDK_TRTC_Smart.framework/Headers",
+					"$(PROJECT_DIR)/../SDK/TXLiteAVSDK_TRTC_Smart.framework/Headers",
 					"$(CONFIGURATION_BUILD_DIR)/TXLiteAVSDK_TRTC.framework/Headers",
 					"$(PROJECT_DIR)/../SDK/TXLiteAVSDK_TRTC.framework/Headers",
 				);

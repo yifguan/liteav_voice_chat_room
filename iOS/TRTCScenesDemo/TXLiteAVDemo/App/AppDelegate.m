@@ -13,12 +13,11 @@
 #ifdef ENABLE_TRTC
 #ifdef ENABLE_PLAY
 #import "TRTCCloud.h"
-#import "TXLiveBase.h"  //TRTC
 #else
 #import "TRTCCloud.h"   //TRTC_Smart
 #endif
 #else
-#import "TXLiveBase.h"  //非TRTC
+
 #endif
 
 #ifndef UGC_SMART
@@ -112,7 +111,7 @@
 #if ENABLE_TRTC
     version = [TRTCCloud getSDKVersion];
 #else
-    version = [TXLiveBase getSDKVersionStr];
+    version = @“”
 #endif
     
 #if DEBUG
@@ -127,13 +126,6 @@
     [TXUGCBase setLicenceURL:@"" key:@""];
 #endif
     
-#if defined(ENABLE_PUSH) && !defined(TRTC)
-    [TXLiveBase setLicenceURL:@"" key:@""];
-#endif
-    
-#ifdef TRTC
-    [TXLiveBase setLicenceURL:@"" key:@""];
-#endif
     
     NSLog(@"rtmp demo init crash report");
 
@@ -149,9 +141,7 @@
 #else
     //初始化log模块
 #ifndef UGC_SMART
-    [TXLiveBase sharedInstance].delegate = [AppLogMgr shareInstance];
-    [TXLiveBase setConsoleEnabled:NO];
-    [TXLiveBase setAppID:@"1252463788"];
+
 #endif
 #endif
     [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(-1000, 0)
